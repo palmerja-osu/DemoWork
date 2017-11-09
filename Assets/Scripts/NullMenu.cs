@@ -1,8 +1,12 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
+
 public class NullMenu : MonoBehaviour {
+
+    public Display_Swap Display_Swap;
+    
 
     public void PressedNullButton()
     {
@@ -14,6 +18,7 @@ public class NullMenu : MonoBehaviour {
     }
     public void PressedDisplayButton()
     {
+        Display_Swap.Update();
         Debug.Log("pressed display button");
     }
 }

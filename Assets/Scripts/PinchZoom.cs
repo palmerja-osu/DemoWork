@@ -7,6 +7,8 @@ public class PinchZoom : MonoBehaviour
     public float perspectiveZoomSpeed = 0.5f;        // The rate of change of the field of view in perspective mode.
     public float orthoZoomSpeed = 0.5f;        // The rate of change of the orthographic size in orthographic mode.
 
+    public float maxZoom = 10f; //farthest you can get
+    public float minZoom = 2f; //closest you can get
 
     void Update()
     {
@@ -27,24 +29,38 @@ public class PinchZoom : MonoBehaviour
 
             // Find the difference in the distances between each frame.
             float deltaMagnitudeDiff = prevTouchDeltaMag - touchDeltaMag;
-            /*
+
             // If the camera is orthographic...
-            if (camera.isOrthoGraphic)
+            if (GetComponent<Camera>().orthographic)
             {
                 // ... change the orthographic size based on the change in distance between the touches.
-                camera.orthographicSize += deltaMagnitudeDiff * orthoZoomSpeed;
+                GetComponent<Camera>().orthographicSize += deltaMagnitudeDiff * orthoZoomSpeed;
 
                 // Make sure the orthographic size never drops below zero.
-                camera.orthographicSize = Mathf.Max(camera.orthographicSize, 0.1f);
+                GetComponent<Camera>().orthographicSize = Mathf.Max(GetComponent<Camera>().orthographicSize, 0.1f);
+
+                float i = GetComponent<Camera>().orthographicSize + deltaMagnitudeDiff * orthoZoomSpeed;
+
+                    if (i >= maxZoom){ //if i is greater than maxZoom, set camera to max
+                        GetComponent<Camera>().orthographicSize = maxZoom;
+                    }
+                    else if (i <= minZoom)
+                    { //same but with min
+                       GetComponent<Camera>().orthographicSize = minZoom;
+                    }
+                    else
+                    { //otherwise just update it to i
+                        GetComponent<Camera>().orthographicSize = i;
+                    }
             }
             else
             {
                 // Otherwise change the field of view based on the change in distance between the touches.
-                camera.fieldOfView += deltaMagnitudeDiff * perspectiveZoomSpeed;
+                GetComponent<Camera>().fieldOfView += deltaMagnitudeDiff * perspectiveZoomSpeed;
 
                 // Clamp the field of view to make sure it's between 0 and 180.
-                camera.fieldOfView = Mathf.Clamp(camera.fieldOfView, 0.1f, 179.9f);
-            } */
+                GetComponent<Camera>().fieldOfView = Mathf.Clamp(GetComponent<Camera>().fieldOfView, 0.1f, 179.9f);
+            }
         }
     }
 }
