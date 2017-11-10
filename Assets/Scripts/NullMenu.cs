@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class NullMenu : MonoBehaviour {
 
-    public Display_Swap Display_Swap;
-    
+    public ImageChanger ImageChanger;
 
     public void PressedNullButton()
     {
@@ -18,7 +17,7 @@ public class NullMenu : MonoBehaviour {
     }
     public void PressedDisplayButton()
     {
-        Display_Swap.Update();
+        
         Debug.Log("pressed display button");
     }
 }
