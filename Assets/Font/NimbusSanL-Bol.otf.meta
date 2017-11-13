@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: f457f5a92f79431469e5699dd086907e
+timeCreated: 1510598867
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Nimbus Sans L
+  fontNames:
+  - Nimbus Sans L
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: d415d740967369144878d3d7ed656081, type: 3}
+  - {fileID: 12800000, guid: d470f703f7b16d94bbe17f5db2f49ed7, type: 3}
+  - {fileID: 12800000, guid: c23f14fbce1ec664d927aa802b18d519, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
