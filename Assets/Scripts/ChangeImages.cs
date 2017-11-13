@@ -1,34 +1,38 @@
-﻿using System.Collections;
+﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine;
+using System.Collections;
 
-public class ChangeImages : MonoBehaviour {
+public class ChangeImages : MonoBehaviour
+{
 
-    
-    public Image[] Images;
-    public Button Display_button;
+    public Sprite plane1; // I attched these from editor
+    public Sprite plane2;
+    public Sprite plane3;
 
-    int count = 0;
+    public int imgNumberCount;
 
-    void Awake()
+
+    public void changeImages() // make sure to attach this to event trigger
     {
-        Images = Resources.LoadAll<Image>("Images");
-    }
-
-    public void On_Click_Button()
-    {
-        count++;
-
-        if(count == Images.Length)
+        switch (imgNumberCount)
         {
-            count = 0;
 
+            case 0:
+                GetComponent<Image>().sprite = plane1;
+                imgNumberCount++; //increase count so it gets higher and switches to different sprite
+                break;
+            case 1:
+                GetComponent<Image>().sprite = plane2;
+                imgNumberCount++;
+                break;
+            case 2:
+                GetComponent<Image>().sprite = plane3;
+                imgNumberCount++;
+                imgNumberCount = 0; //Reset it to 0
+                break;
+            default:
+                Debug.Log("Error");
+                break;
         }
-
-        Display_button.image = Images[count];
-
-        
-        
     }
-
 }

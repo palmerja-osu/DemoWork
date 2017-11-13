@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class NullMenu : MonoBehaviour {
 
-    public ChangeImage ChangeImage;
+    public ChangeImages changeImage;
 
     public void PressedNullButton()
     {
@@ -18,7 +18,7 @@ public class NullMenu : MonoBehaviour {
     public void PressedDisplayButton()
     {
 
-        ChangeImage.changeImages();
+        changeImage.changeImages();
         Debug.Log("pressed display button");
     }
 }
