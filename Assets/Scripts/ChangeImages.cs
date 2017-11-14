@@ -8,6 +8,7 @@ public class ChangeImages : MonoBehaviour
     public Sprite plane1; // I attched these from editor
     public Sprite plane2;
     public Sprite plane3;
+    public Sprite plane4;
 
     public int imgNumberCount;
 
@@ -29,6 +30,11 @@ public class ChangeImages : MonoBehaviour
                 GetComponent<Image>().sprite = plane3;
                 imgNumberCount++;
                 imgNumberCount = 0; //Reset it to 0
+                break;
+            case 3:
+                GetComponent<Image>().sprite = plane4;
+                imgNumberCount++;
+                imgNumberCount = 0;
                 break;
             default:
                 Debug.Log("Error");

@@ -287,3 +287,4 @@ b15fb6ded837852428ffad873d313f36 Assembly-CSharp.dll:UnityEngine.UI.Extensions.D
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:UnityEngine.UI.Extensions.UIMultiplyEffect
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PinchZoom
 fb32d969613de9c619e45d4e7146262d Assembly-CSharp.dll:.PinchVersion2
+c838ea6b6945486d5994fc33c760fc6f Assembly-CSharp.dll:.contentScrollRect
