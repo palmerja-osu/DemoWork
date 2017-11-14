@@ -68,6 +68,7 @@
      <Compile Include="Assets\Scripts\PinchVersion2.cs" />
      <Compile Include="Assets\Scripts\PinchZoom.cs" />
      <Compile Include="Assets\Scripts\populateRotation.cs" />
+     <Compile Include="Assets\Scripts\RotScrollSnap.cs" />
      <Compile Include="Assets\Scripts\VGainUI.cs" />
      <Compile Include="Assets\unity-ui-extensions\Examples\ComboBox\ComboBoxChanged.cs" />
      <Compile Include="Assets\unity-ui-extensions\Examples\Cooldown\CooldownEffect_Image.cs" />
