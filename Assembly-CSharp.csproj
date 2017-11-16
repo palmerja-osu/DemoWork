@@ -51,11 +51,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\ChangeImage.cs" />
      <Compile Include="Assets\Scripts\ChangeImages.cs" />
      <Compile Include="Assets\Scripts\contentScrollRect.cs" />
      <Compile Include="Assets\Scripts\FrequencyUI.cs" />
      <Compile Include="Assets\Scripts\GainUI.cs" />
      <Compile Include="Assets\Scripts\HGainUI.cs" />
+     <Compile Include="Assets\Scripts\ImageChanger.cs" />
+     <Compile Include="Assets\Scripts\Keypad_Code.cs" />
+     <Compile Include="Assets\Scripts\keypadNum.cs" />
      <Compile Include="Assets\Scripts\Menu.cs" />
      <Compile Include="Assets\Scripts\NullMenu.cs" />
      <Compile Include="Assets\Scripts\Options_Menu.cs" />
