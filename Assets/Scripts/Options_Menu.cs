@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System.Linq;
+using System;
+using System.Collections;
+using System.Collections.Generic;
 
 public class Options_Menu : MonoBehaviour {
 
@@ -18,7 +22,8 @@ public class Options_Menu : MonoBehaviour {
     [Header("Menu Text")]
     public GameObject rotationText;
     public string rotationOutput;
-    
+
+
     
     public void Update()
     {
@@ -82,12 +87,12 @@ public class Options_Menu : MonoBehaviour {
     //      Rotation
     //***************************************
     
-    public void rotOutput(string[] rotOut)
+    public void rotOutput(string rotOut)
     {
-        //set output to string from dialpad
-       // rotationOutput = rotOut;
-        
-        rotationText.GetComponent<Text>().text = "Rotation: " + rotationOutput + "Deg";
+        Debug.Log("rotOutPut");
+        rotationOutput = rotOut;
+        //take string and output
+        rotationText.GetComponent<Text>().text = "Rotation: " + rotationOutput + " Deg";
     
     }
     public void RotationButton()

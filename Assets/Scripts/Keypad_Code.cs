@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using NUnit.Framework;
 using System.Linq;
+using System;
 
 public class Keypad_Code : MonoBehaviour {
 
@@ -53,7 +54,6 @@ public class Keypad_Code : MonoBehaviour {
         
         if (go == number1)
         {
-            Debug.Log("pressed 1");
             increaseCod(1);
         }
         if (go == number2)
@@ -102,7 +102,7 @@ public class Keypad_Code : MonoBehaviour {
         if (go == numberSave)
         {
             //okaybutton return to Option menu
-            returnOption();
+            saveList();
         }
 
 
@@ -192,12 +192,21 @@ public class Keypad_Code : MonoBehaviour {
     {
         //save List option here!!!!!!!!!!!!!!!
         //then send List to Options_Menu
-
-        //Options_Menu.rotOutput(ref cod, ref int index){
-        //    cod[index]++;
-        //}
-
         
+        Debug.Log("create string and set cod to string");
+
+
+        //rewrite List to an array
+        //this overload calls ToString() on each input element): string.Join(",", ints)
+        var stringsArray = cod.Select(i => i.ToString()).ToArray();
+        var values = string.Join("", stringsArray);
+
+
+        Debug.Log("send to rotOutPut in OptionsMenu");
+        Options_Menu.rotOutput(values);
+        //toggle window off
+        returnOption();
+
     }
 
     void returnOption()
