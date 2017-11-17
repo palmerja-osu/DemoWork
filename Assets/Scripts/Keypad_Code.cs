@@ -2,11 +2,18 @@
 using UnityEngine.UI;
 using UnityEngine;
 using System.Collections.Generic;
+using NUnit.Framework;
+using System.Linq;
 
 public class Keypad_Code : MonoBehaviour {
 
     public int[] acceptCode;
+    [Header("Connecting Functions")]
+    public Options_Menu Options_Menu;
+    public GameObject ui;
 
+
+    [Header("Keypad Num ref")]
     public GameObject number1;
     public GameObject number2;
     public GameObject number3;
@@ -24,11 +31,18 @@ public class Keypad_Code : MonoBehaviour {
 
     public string waitText;
     public string errorText;
-    public string acceptText;
 
     List<int> cod = new List<int>();
     int index = 0;
 
+    public object Class1 { get; private set; }
+
+    public void Update()
+    {
+        //open inspector when menu button is pressed
+        ui.SetActive(true);
+
+    }
     void Start()
     {
         text.GetComponent<Text>().text = waitText;
@@ -87,41 +101,11 @@ public class Keypad_Code : MonoBehaviour {
 
         if (go == numberSave)
         {
-            attemptAuthentication();
+            //okaybutton return to Option menu
+            returnOption();
         }
 
 
-    }
-
-
-    void attemptAuthentication()
-    {
-        //if (index == acceptText.Length)
-        //{
-        //    bool certo = true;
-        //    for(int i = 0; i < acceptText.Length; i++)
-        //    {
-        //        if (cod[i] != acceptText[i])
-        //        {
-        //            certo = false;
-        //            break;
-        //        }
-        //    }
-        //    if (certo)
-        //    {
-        //        text.GetComponent<Text>().text = acceptText;
-        //    }
-        //    else
-        //    {
-        //        text.GetComponent<Text>().text = errorText;
-        //    }
-        //}
-        //else
-        //{
-        //    //if the password text errors, delete text
-        //    text.GetComponent<Text>().text = errorText;
-        //    deleteNoChangeText();  
-        //}
     }
 
     void deleteNoChangeText()
@@ -152,27 +136,86 @@ public class Keypad_Code : MonoBehaviour {
         else
         {
             Debug.Log("list is full");
-
+            //if first position is greater than 3
             if(cod[0] > 3)
             {
-                Debug.Log("cod[0] > 3 dumb ass");
-            }
-            if (cod[1] > 6)
-            {
-                Debug.Log("cod[1] > 6 dumb ass");
-            }
-            if (cod[2] > 0)
-            {
+                //clear
+                delete();
+                text.GetComponent<Text>().text = errorText; // then show error output message
+                Debug.Log("cod[0] > first greater than 3 oops");
                 
-                Debug.Log("cod[2] > 0 dumb ass");
+                
             }
+            //if cod 300 >= cod <= 399
+            if(cod[0] == 3)
+            {
+                //then check if the second is higher than 60 ONLY if first position == 3
+                if (cod[1] > 5)
+                {
+                    //clear
+                    delete();
+                    text.GetComponent<Text>().text = errorText; // then show error output message
+                    Debug.Log("cod[1] > less than 400 but greater than 35-");
+                }
+
+                //if second position is exactly 6
+                else if (cod[1] == 9)
+                {
+                    //then check if third position is no higher than 0 IF first position > 3 and second > 6
+                    //redudent test case
+                    if (cod[2] > 9)
+                    {
+                        delete();
+                        text.GetComponent<Text>().text = errorText; // then show error output message
+                        Debug.Log("greater than 360 less than 399");
+                    }
+                }
+                else
+                {
+                    Debug.Log("just let it happen");
+                    //let this happen?
+                }
+            }
+            else
+            {
+                //send to rotOutput in Options_Menu
+                Debug.Log("List is OKAY");
+                saveList();
+ 
+            }
+
         }
+           
+    }
+
+    void saveList()
+    {
+        //save List option here!!!!!!!!!!!!!!!
+        //then send List to Options_Menu
+
+        //Options_Menu.rotOutput(ref cod, ref int index){
+        //    cod[index]++;
+        //}
+
         
+    }
 
-
-
-
+    void returnOption()
+    {
+        //toggle UI off and Options on
+        Toggle();
+        Options_Menu.Update();
     }
 
 
+    public void Toggle()
+    {
+
+        //incase its enabled, flipped and set inactive and visa versa
+        ui.SetActive(!ui.activeSelf);
+
+    }
 }
+
+
+

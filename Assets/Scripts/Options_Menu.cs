@@ -1,25 +1,29 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class Options_Menu : MonoBehaviour {
 
     [Header("Connecting Panels")]
+
     public Menu Menu;
     public Panel_Freq Panel_Freq;
     public Panel_Gain Panel_Gain;
     public Panel_HGain Panel_HGain;
-    public Panel_VGain Panel_VGain;
-    public Panel_Rotation Panel_Rotation;
+    public Keypad_Code Keypad_Code;
 
-    [Header("Options UI")]
+    [Header("Options UI Toggle")]
     public GameObject ui;
-    public GameObject menuOpenUI;
+
+    [Header("Menu Text")]
+    public GameObject rotationText;
+    public string rotationOutput;
     
     
     public void Update()
     {
         //open inspector when menu button is pressed
-       menuOpenUI.SetActive(true);
+       ui.SetActive(true);
         
     }
     //***************************************
@@ -72,31 +76,41 @@ public class Options_Menu : MonoBehaviour {
 
 
 
-    //***************************************
-    //      V_Gain
-    //***************************************
-    public void V_GainButton()
-    {
-        ToggleVGain();
-        Debug.Log("V_Gain button");
-    }
-    private void ToggleVGain()
-    {
-        Toggle();
-        Panel_VGain.Update();
-    }
-
-
+   
 
     //***************************************
     //      Rotation
     //***************************************
+    
+    public void rotOutput(string[] rotOut)
+    {
+        //set output to string from dialpad
+       // rotationOutput = rotOut;
+        
+        rotationText.GetComponent<Text>().text = "Rotation: " + rotationOutput + "Deg";
+    
+    }
     public void RotationButton()
     {
         ToggleRotation();
+        
         Debug.Log("Return to Menu button");
     }
     private void ToggleRotation()
+    {
+        Toggle();
+        Keypad_Code.Update();
+    }
+
+    //***************************************
+    //     Return to Menu
+    //***************************************
+    public void MenuButton()
+    {
+        ToggleMenu();
+        Debug.Log("V_Gain button");
+    }
+    private void ToggleMenu()
     {
         Toggle();
         Menu.Toggle();
