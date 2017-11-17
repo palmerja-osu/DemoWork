@@ -2,7 +2,6 @@
 using UnityEngine.UI;
 using UnityEngine;
 using System.Collections.Generic;
-using NUnit.Framework;
 using System.Linq;
 using System;
 
@@ -30,8 +29,8 @@ public class Keypad_Code : MonoBehaviour {
 
     public GameObject text;
 
-    public string waitText;
-    public string errorText;
+    private string waitText = "";
+    private string errorText = "Error: >=360";
 
     List<int> cod = new List<int>();
     int index = 0;
@@ -46,6 +45,7 @@ public class Keypad_Code : MonoBehaviour {
     }
     void Start()
     {
+        waitText = "";
         text.GetComponent<Text>().text = waitText;
     }
 
@@ -108,11 +108,6 @@ public class Keypad_Code : MonoBehaviour {
 
     }
 
-    void deleteNoChangeText()
-    {
-        cod.Clear();
-        index = 0;
-    }
 
 
     void delete()
@@ -124,10 +119,15 @@ public class Keypad_Code : MonoBehaviour {
 
     public void increaseCod(int num)
     {
-        
+ 
+ 
         if (index < 3)
         {
-
+            bool isEmpty = !cod.Any();
+            if (isEmpty)
+            {
+                delete();
+            }
             cod.Add(num);
             index++;
             text.GetComponent<Text>().text += num;
@@ -137,38 +137,41 @@ public class Keypad_Code : MonoBehaviour {
         {
             Debug.Log("list is full");
             //if first position is greater than 3
-            if(cod[0] > 3)
+            if (cod[0] > 3)
             {
+                Debug.Log("cod[0] > first greater than 3 oops");
                 //clear
                 delete();
                 text.GetComponent<Text>().text = errorText; // then show error output message
-                Debug.Log("cod[0] > first greater than 3 oops");
-                
-                
+
+
+
             }
             //if cod 300 >= cod <= 399
-            if(cod[0] == 3)
+            if (cod[0] == 3)
             {
-                //then check if the second is higher than 60 ONLY if first position == 3
+                //if cod in 300 range is >= 60
                 if (cod[1] > 5)
                 {
+                    Debug.Log("cod[1] > less than 400 but greater than 35-");
                     //clear
                     delete();
                     text.GetComponent<Text>().text = errorText; // then show error output message
-                    Debug.Log("cod[1] > less than 400 but greater than 35-");
+
                 }
 
-                //if second position is exactly 6
-                else if (cod[1] == 9)
+                //if second position 5 or less
+                else if (cod[1] <= 5)
                 {
-                    //then check if third position is no higher than 0 IF first position > 3 and second > 6
+                    //then check if third position is no higher than 0 IF first position > 3 and second > 5
                     //redudent test case
-                    if (cod[2] > 9)
+                    if (cod[2] >= 9)
                     {
+                        Debug.Log("greater than 360 less than 399");
                         delete();
                         text.GetComponent<Text>().text = errorText; // then show error output message
-                        Debug.Log("greater than 360 less than 399");
-                    }
+
+                    } 
                 }
                 else
                 {
@@ -180,23 +183,64 @@ public class Keypad_Code : MonoBehaviour {
             {
                 //send to rotOutput in Options_Menu
                 Debug.Log("List is OKAY");
-                saveList();
- 
+
+
             }
 
         }
+        
            
     }
 
     void saveList()
     {
-        //save List option here!!!!!!!!!!!!!!!
+        //save List option here
+        //check set  parameters
         //then send List to Options_Menu
+
+        Debug.Log("saveList call");
+        //if first position is greater than 3
+        if (cod[0] > 3)
+        {
+            Debug.Log("cod[0] > first greater than 3 oops");
+            //clear
+            delete();
+            text.GetComponent<Text>().text = errorText; // then show error output message
+        }
         
-        Debug.Log("create string and set cod to string");
+        //if cod 300 >= cod <= 399
+        else if (cod[0] == 3)
+        {
+            //if cod in 300 range is >= 60
+            if (cod[1] > 5)
+            {
+                Debug.Log("cod[1] > less than 400 but greater than 35-");
+                //clear
+                delete();
+                text.GetComponent<Text>().text = errorText; // then show error output message
+
+            }
+            else
+            {
+                Debug.Log("just let it happen");
+                //let this happen?
+                sortList();
+            }
+        }
+        else
+        {
+            //if less than 3, send to sortList
+            sortList();
+
+        }
 
 
-        //rewrite List to an array
+    }
+
+    void sortList()
+    {
+       
+        //rewrite List to a string
         //this overload calls ToString() on each input element): string.Join(",", ints)
         var stringsArray = cod.Select(i => i.ToString()).ToArray();
         var values = string.Join("", stringsArray);
@@ -208,7 +252,6 @@ public class Keypad_Code : MonoBehaviour {
         returnOption();
 
     }
-
     void returnOption()
     {
         //toggle UI off and Options on

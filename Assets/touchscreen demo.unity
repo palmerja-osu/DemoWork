@@ -32822,8 +32822,6 @@ MonoBehaviour:
   number0: {fileID: 145830202}
   numberSave: {fileID: 2081093059}
   text: {fileID: 816209795}
-  waitText: 
-  errorText: 'Error: >=360'
 --- !u!222 &862754387
 CanvasRenderer:
   m_ObjectHideFlags: 0
