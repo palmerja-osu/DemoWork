@@ -36,6 +36,7 @@ public class Keypad_Code : MonoBehaviour {
 
     public void receiveSignal(GameObject go)
     {
+        
         if (go == number1)
         {
             Debug.Log("pressed 1");
@@ -95,32 +96,32 @@ public class Keypad_Code : MonoBehaviour {
 
     void attemptAuthentication()
     {
-        if (index == acceptText.Length)
-        {
-            bool certo = true;
-            for(int i = 0; i < acceptText.Length; i++)
-            {
-                if (cod[i] != acceptText[i])
-                {
-                    certo = false;
-                    break;
-                }
-            }
-            if (certo)
-            {
-                text.GetComponent<Text>().text = acceptText;
-            }
-            else
-            {
-                text.GetComponent<Text>().text = errorText;
-            }
-        }
-        else
-        {
-            //if the password text errors, delete text
-            text.GetComponent<Text>().text = errorText;
-            deleteNoChangeText();  
-        }
+        //if (index == acceptText.Length)
+        //{
+        //    bool certo = true;
+        //    for(int i = 0; i < acceptText.Length; i++)
+        //    {
+        //        if (cod[i] != acceptText[i])
+        //        {
+        //            certo = false;
+        //            break;
+        //        }
+        //    }
+        //    if (certo)
+        //    {
+        //        text.GetComponent<Text>().text = acceptText;
+        //    }
+        //    else
+        //    {
+        //        text.GetComponent<Text>().text = errorText;
+        //    }
+        //}
+        //else
+        //{
+        //    //if the password text errors, delete text
+        //    text.GetComponent<Text>().text = errorText;
+        //    deleteNoChangeText();  
+        //}
     }
 
     void deleteNoChangeText()
@@ -132,22 +133,41 @@ public class Keypad_Code : MonoBehaviour {
 
     void delete()
     {
-
-        index--;
+        cod.Clear();
+        index = 0;
         text.GetComponent<Text>().text = waitText;
     }
 
     public void increaseCod(int num)
     {
-        cod.Add(num);
-        index++;
-
-        text.GetComponent<Text>().text = "";
-
-        for (int i=0; i< index; i++)
+        
+        if (index < 3)
         {
-            text.GetComponent<Text>().text += "*";
+
+            cod.Add(num);
+            index++;
+            text.GetComponent<Text>().text += num;
+
         }
+        else
+        {
+            Debug.Log("list is full");
+
+            if(cod[0] > 3)
+            {
+                Debug.Log("cod[0] > 3 dumb ass");
+            }
+            if (cod[1] > 6)
+            {
+                Debug.Log("cod[1] > 6 dumb ass");
+            }
+            if (cod[2] > 0)
+            {
+                
+                Debug.Log("cod[2] > 0 dumb ass");
+            }
+        }
+        
 
 
 
