@@ -58,7 +58,6 @@
      <Compile Include="Assets\Scripts\ImageChanger.cs" />
      <Compile Include="Assets\Scripts\Keypad_RotCode.cs" />
      <Compile Include="Assets\Scripts\keypadNum.cs" />
-     <Compile Include="Assets\Scripts\Menu.cs" />
      <Compile Include="Assets\Scripts\Options_Menu.cs" />
      <Compile Include="Assets\Scripts\Panel_Freq.cs" />
      <Compile Include="Assets\Scripts\Panel_Gain.cs" />
@@ -66,8 +65,8 @@
      <Compile Include="Assets\Scripts\Panel_VGain.cs" />
      <Compile Include="Assets\Scripts\PinchVersion2.cs" />
      <Compile Include="Assets\Scripts\PinchZoom.cs" />
-     <Compile Include="Assets\Scripts\populateRotation.cs" />
      <Compile Include="Assets\Scripts\RotScrollSnap.cs" />
+     <Compile Include="Assets\Scripts\Small_PlaneToggle.cs" />
      <Compile Include="Assets\unity-ui-extensions\Examples\ComboBox\ComboBoxChanged.cs" />
      <Compile Include="Assets\unity-ui-extensions\Examples\Cooldown\CooldownEffect_Image.cs" />
      <Compile Include="Assets\unity-ui-extensions\Examples\Cooldown\CooldownEffect_SAUIM.cs" />

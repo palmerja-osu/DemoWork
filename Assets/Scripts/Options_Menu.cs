@@ -16,6 +16,7 @@ public class Options_Menu : MonoBehaviour {
     public Panel_Freq Panel_Freq;
     public Panel_Gain Panel_Gain;
     public Keypad_RotCode Keypad_RotCode;
+    public Small_PlaneToggle SmallPlaneToggle;
     
 
     [Header("Options UI Toggle")]
@@ -59,6 +60,13 @@ public class Options_Menu : MonoBehaviour {
         ToggleFreqMenu();
         Debug.Log("Frequency button");
     }
+    //functionality for second scene
+    public void FrequencyButton2()
+    {
+        SmallPlaneToggle.Toggle();
+        Panel_Freq.Update();
+        Debug.Log("Frequency2 button");
+    }
     //change menues
     private void ToggleFreqMenu()
     {
@@ -76,6 +84,12 @@ public class Options_Menu : MonoBehaviour {
         Debug.Log("Gain button");
     }
 
+    public void GainButton2()
+    {
+        Panel_Gain.Update();
+        Debug.Log("Gain button");
+    }
+
     private void ToggleGainMenu()
     {
         Toggle();
@@ -90,7 +104,7 @@ public class Options_Menu : MonoBehaviour {
     
     public void rotOutput(string rotOut)
     {
-        Debug.Log("rotOutPut");
+        
         rotationOutput = rotOut;
         //take string and output
         rotationText.GetComponent<Text>().text = "Rotation: " + rotationOutput + " Deg";
@@ -100,6 +114,12 @@ public class Options_Menu : MonoBehaviour {
     {
         ToggleRotation();
         
+        Debug.Log("Open Rotation button");
+    }
+    public void RotationButton2()
+    {
+        Keypad_RotCode.Update();
+        SmallPlaneToggle.Toggle();
         Debug.Log("Open Rotation button");
     }
     private void ToggleRotation()

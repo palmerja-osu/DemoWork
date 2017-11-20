@@ -4,13 +4,15 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
 using System;
+using UnityEngine.SceneManagement;
 
 public class Keypad_RotCode : MonoBehaviour {
 
-    public int[] acceptCode;
+
     [Header("Connecting Functions")]
     public Options_Menu Options_Menu;
     public GameObject ui;
+    public Small_PlaneToggle Small_PlaneToggle;
 
 
     [Header("Keypad Num ref")]
@@ -142,11 +144,13 @@ public class Keypad_RotCode : MonoBehaviour {
             //if first position is greater than 3
             if (cod[0] > 3)
             {
-                Debug.Log("cod[0] > first greater than 3 oops");
-                //clear
-                delete();
-                text.GetComponent<Text>().text = errorText; // then show error output message
-
+                if (index > 3)
+                {
+                    Debug.Log("cod[0] > first greater than 3 oops");
+                    //clear
+                    delete();
+                    text.GetComponent<Text>().text = errorText; // then show error output message
+                }
 
 
             }
@@ -203,35 +207,55 @@ public class Keypad_RotCode : MonoBehaviour {
 
         Debug.Log("saveList call");
         //if first position is greater than 3
-        if (cod[0] > 3)
+        if (cod[0] >= 3)
         {
-            Debug.Log("cod[0] > first greater than 3 oops");
-            //clear
-            delete();
-            text.GetComponent<Text>().text = errorText; // then show error output message
-        }
-        
-        //if cod 300 >= cod <= 399
-        else if (cod[0] == 3)
-        {
-            //if cod in 300 range is >= 60
-            if (cod[1] > 5)
+            Debug.Log("inside cod[0] >= 3 ");
+            if (cod[0] > 3 && index > 3)
             {
-                Debug.Log("cod[1] > less than 400 but greater than 35-");
+
+                Debug.Log("inside cod[0] > 3 && index > 3 ");
                 //clear
                 delete();
                 text.GetComponent<Text>().text = errorText; // then show error output message
 
             }
+            else if (cod[0] > 3)
+            {
+                if (index > 3)
+                {
+                    delete();
+                    text.GetComponent<Text>().text = errorText; // then show error output message
+                }
+            }
+            else if (cod[0] == 3)
+            {
+                if (cod[1] > 5)
+                {
+                    Debug.Log("in second else if statement");
+                    //clear
+                    delete();
+                    text.GetComponent<Text>().text = errorText; // then show error output message
+
+                }
+                else
+                {
+
+                    Debug.Log("just let it happen cod[0] == 3");
+                    //let this happen?
+                    sortList();
+
+                }
+            }
             else
             {
-                Debug.Log("just let it happen");
+                Debug.Log("inside cod[0] >= 3  and sortList(); sent");
                 //let this happen?
                 sortList();
             }
         }
         else
         {
+            Debug.Log("save and send to sortList");
             //if less than 3, send to sortList
             sortList();
 
@@ -249,10 +273,21 @@ public class Keypad_RotCode : MonoBehaviour {
         var values = string.Join("", stringsArray);
 
 
-        Debug.Log("send to rotOutPut in OptionsMenu");
+        
         Options_Menu.rotOutput(values);
-        //toggle window off
-        returnOption();
+
+
+        //check scene
+        //if scene two, send to second option
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("pt2_Touch"))
+        {
+            returnOption2();
+        }
+        else
+        {
+            //toggle window off
+            returnOption();
+        }
 
     }
     void returnOption()
@@ -261,6 +296,13 @@ public class Keypad_RotCode : MonoBehaviour {
         Toggle();
         Options_Menu.Update();
     }
+    void returnOption2()
+    {
+        //toggle UI off and Options on
+        Toggle();
+        //Options_Menu.Update();
+    }
+
 
 
     public void Toggle()
