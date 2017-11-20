@@ -8,3 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/touchscreen demo.unity
     guid: 4323f24e8f77e2f4fb7b4407200bb335
+  - enabled: 1
+    path: Assets/pt2_Touch.unity
+    guid: 292ab91dd460ad445b2e3be334afd483

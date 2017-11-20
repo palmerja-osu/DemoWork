@@ -5,6 +5,7 @@ using System.Linq;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class Options_Menu : MonoBehaviour {
 
@@ -36,15 +37,17 @@ public class Options_Menu : MonoBehaviour {
 
 
     //***************************************
-    //     Change main image
+    //     Change main image //  Channel
     //***************************************
 
-    public void PressedDisplayButton()
+    public void PressedChannelButton()
     {
 
         changeImage.changeImages();
         Debug.Log("pressed display button");
     }
+
+    
 
 
     //***************************************
@@ -80,24 +83,6 @@ public class Options_Menu : MonoBehaviour {
     }
 
 
-    ////***************************************
-    ////      V_Gain
-    ////***************************************
-    //public void H_GainButton()
-    //{
-    //    ToggleHGain();
-    //    Debug.Log("Gain button");
-    //}
-
-    //private void ToggleHGain()
-    //{
-    //    Toggle();
-    //    Panel_HGain.Update();
-    //}
-
-
-
-   
 
     //***************************************
     //      Rotation
@@ -124,19 +109,28 @@ public class Options_Menu : MonoBehaviour {
     }
 
     //***************************************
-    //     Return to Menu
+    //     Clear Button
     //***************************************
-    //public void MenuButton()
-    //{
-    //    ToggleMenu();
-    //    Debug.Log("Menu button");
-    //}
-    //private void ToggleMenu()
-    //{
-    //    Toggle();
-    //    Menu.Toggle();
-    //}
+    public void PressedClearButton()
+    {
 
+        changeImage.ClearButtonimgCount();
+        Debug.Log("pressed clear button");
+    }
+
+    //***************************************
+    //     Change Display Layout
+    //***************************************
+    
+    public void PressedDisplayButton()
+    {
+        SceneManager.LoadScene("pt2_Touch");
+    }
+
+    public void PressedReturnDisplayButton()
+    {
+        SceneManager.LoadScene("touchscreen demo");
+    }
 
 
 

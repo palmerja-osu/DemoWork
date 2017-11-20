@@ -9,6 +9,7 @@ public class ChangeImages : MonoBehaviour
     public Sprite plane2;
     public Sprite plane3;
     public Sprite plane4;
+    public Sprite plane5;
 
 
     public int imgNumberCount;
@@ -37,10 +38,15 @@ public class ChangeImages : MonoBehaviour
                 imgNumberCount = 0; //set back to first image
                 break;
 
-
             default:
                 Debug.Log("Error");
                 break;
         }
+    }
+
+    public void ClearButtonimgCount()
+    {
+        //when clear button is pressed set image to empty plane5
+        GetComponent<Image>().sprite = plane5;
     }
 }
