@@ -7,7 +7,6 @@ public class RotScrollSnap : MonoBehaviour
     static ScrollRect scrollRect;
     public ScrollRect myScrollRect;
     public RectTransform scrollableContent;
-    public OptionsStats OptionStats;
 
 
 

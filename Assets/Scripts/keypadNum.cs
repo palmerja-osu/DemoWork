@@ -10,6 +10,6 @@ public class keypadNum : MonoBehaviour {
     void OnMouseDown()
     {
         
-        keypad.GetComponent<Keypad_Code>().receiveSignal(gameObject);
+        keypad.GetComponent<Keypad_RotCode>().receiveSignal(gameObject);
     }
 }

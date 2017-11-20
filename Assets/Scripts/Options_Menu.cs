@@ -10,11 +10,12 @@ public class Options_Menu : MonoBehaviour {
 
     [Header("Connecting Panels")]
 
-    public Menu Menu;
+    //public Menu Menu;
+    public ChangeImages changeImage;
     public Panel_Freq Panel_Freq;
     public Panel_Gain Panel_Gain;
-    public Panel_HGain Panel_HGain;
-    public Keypad_Code Keypad_Code;
+    public Keypad_RotCode Keypad_RotCode;
+    
 
     [Header("Options UI Toggle")]
     public GameObject ui;
@@ -31,12 +32,27 @@ public class Options_Menu : MonoBehaviour {
        ui.SetActive(true);
         
     }
+
+
+
+    //***************************************
+    //     Change main image
+    //***************************************
+
+    public void PressedDisplayButton()
+    {
+
+        changeImage.changeImages();
+        Debug.Log("pressed display button");
+    }
+
+
     //***************************************
     //      Frequency
     //***************************************
     public void FrequencyButton()
     {
-        
+        //frequencyText.text = "Frequency: " + OptionsStats.Frequency.ToString() + "MHz";  //could do this
         ToggleFreqMenu();
         Debug.Log("Frequency button");
     }
@@ -64,20 +80,20 @@ public class Options_Menu : MonoBehaviour {
     }
 
 
-    //***************************************
-    //      V_Gain
-    //***************************************
-    public void H_GainButton()
-    {
-        ToggleHGain();
-        Debug.Log("Gain button");
-    }
+    ////***************************************
+    ////      V_Gain
+    ////***************************************
+    //public void H_GainButton()
+    //{
+    //    ToggleHGain();
+    //    Debug.Log("Gain button");
+    //}
 
-    private void ToggleHGain()
-    {
-        Toggle();
-        Panel_HGain.Update();
-    }
+    //private void ToggleHGain()
+    //{
+    //    Toggle();
+    //    Panel_HGain.Update();
+    //}
 
 
 
@@ -99,27 +115,27 @@ public class Options_Menu : MonoBehaviour {
     {
         ToggleRotation();
         
-        Debug.Log("Return to Menu button");
+        Debug.Log("Open Rotation button");
     }
     private void ToggleRotation()
     {
         Toggle();
-        Keypad_Code.Update();
+        Keypad_RotCode.Update();
     }
 
     //***************************************
     //     Return to Menu
     //***************************************
-    public void MenuButton()
-    {
-        ToggleMenu();
-        Debug.Log("V_Gain button");
-    }
-    private void ToggleMenu()
-    {
-        Toggle();
-        Menu.Toggle();
-    }
+    //public void MenuButton()
+    //{
+    //    ToggleMenu();
+    //    Debug.Log("Menu button");
+    //}
+    //private void ToggleMenu()
+    //{
+    //    Toggle();
+    //    Menu.Toggle();
+    //}
 
 
 
