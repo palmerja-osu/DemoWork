@@ -32275,7 +32275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   changeImage: {fileID: 1533474395}
   Panel_Freq: {fileID: 217654128}
-  Panel_Gain: {fileID: 0}
+  Panel_Gain: {fileID: 198217916}
   Keypad_RotCode: {fileID: 862754386}
   SmallPlaneToggle: {fileID: 285011672}
   ui: {fileID: 968603686}

@@ -7760,7 +7760,7 @@ MonoBehaviour:
   ui: {fileID: 217654127}
   Freq_MenuUI: {fileID: 217654127}
   Options_Menu: {fileID: 1761828980}
-  Small_PlaneToggle: {fileID: 0}
+  Small_PlaneToggle: {fileID: 703875538}
 --- !u!114 &217654130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66169,7 +66169,7 @@ MonoBehaviour:
   ui: {fileID: 1986574741}
   Gain_MenuUI: {fileID: 1986574741}
   Options_Menu: {fileID: 1761828980}
-  Small_PlaneToggle: {fileID: 0}
+  Small_PlaneToggle: {fileID: 703875538}
 --- !u!114 &1986574743
 MonoBehaviour:
   m_ObjectHideFlags: 0
