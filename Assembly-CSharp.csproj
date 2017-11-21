@@ -68,6 +68,7 @@
      <Compile Include="Assets\Scripts\PinchZoom.cs" />
      <Compile Include="Assets\Scripts\RotScrollSnap.cs" />
      <Compile Include="Assets\Scripts\Small_PlaneToggle.cs" />
+     <Compile Include="Assets\Scripts\Store_Button.cs" />
      <Compile Include="Assets\unity-ui-extensions\Examples\ComboBox\ComboBoxChanged.cs" />
      <Compile Include="Assets\unity-ui-extensions\Examples\Cooldown\CooldownEffect_Image.cs" />
      <Compile Include="Assets\unity-ui-extensions\Examples\Cooldown\CooldownEffect_SAUIM.cs" />

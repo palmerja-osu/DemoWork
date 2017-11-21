@@ -17,10 +17,13 @@ public class Options_Menu : MonoBehaviour {
     public Panel_Gain Panel_Gain;
     public Keypad_RotCode Keypad_RotCode;
     public Small_PlaneToggle SmallPlaneToggle;
+    public Store_Button Store_Button;
     
+
 
     [Header("Options UI Toggle")]
     public GameObject ui;
+
 
     [Header("Menu Text")]
     public GameObject rotationText;
@@ -96,12 +99,20 @@ public class Options_Menu : MonoBehaviour {
         Panel_Gain.Update();
     }
 
+    //***************************************
+    //      Store // Screenshot 
+    //***************************************
+    public void StoreButton()
+    {
+        //Store_Button.Start();
+        Debug.Log("Store button");
+    }
 
 
     //***************************************
     //      Rotation
     //***************************************
-    
+
     public void rotOutput(string rotOut)
     {
         
