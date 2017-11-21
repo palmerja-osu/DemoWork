@@ -272,11 +272,6 @@ public class Keypad_RotCode : MonoBehaviour {
         var stringsArray = cod.Select(i => i.ToString()).ToArray();
         var values = string.Join("", stringsArray);
 
-
-        
-        Options_Menu.rotOutput(values);
-
-
         //check scene
         //if scene two, send to second option
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("pt2_Touch"))
@@ -289,6 +284,9 @@ public class Keypad_RotCode : MonoBehaviour {
             returnOption();
         }
 
+
+        Options_Menu.rotOutput(values);
+
     }
     void returnOption()
     {
@@ -300,6 +298,7 @@ public class Keypad_RotCode : MonoBehaviour {
     {
         //toggle UI off and Options on
         Toggle();
+        Small_PlaneToggle.Toggle();
         //Options_Menu.Update();
     }
 

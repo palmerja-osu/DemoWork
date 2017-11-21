@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/pt2_Touch.unity
+- path: Assets/touchscreen demo.unity
   isLoaded: 1
   isActive: 1
