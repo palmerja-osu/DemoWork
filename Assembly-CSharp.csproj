@@ -51,7 +51,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\ChangeImage.cs" />
      <Compile Include="Assets\Scripts\ChangeImages.cs" />
      <Compile Include="Assets\Scripts\contentScrollRect.cs" />
      <Compile Include="Assets\Scripts\ImageChanger.cs" />

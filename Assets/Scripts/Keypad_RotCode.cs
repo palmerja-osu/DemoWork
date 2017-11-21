@@ -158,7 +158,7 @@ public class Keypad_RotCode : MonoBehaviour {
             if (cod[0] == 3)
             {
                 //if cod in 300 range is >= 60
-                if (cod[1] > 5)
+                if (cod[0] == 3 && cod[1] > 5)
                 {
                     Debug.Log("cod[1] > less than 400 but greater than 35-");
                     //clear
@@ -168,7 +168,7 @@ public class Keypad_RotCode : MonoBehaviour {
                 }
 
                 //if second position 5 or less
-                else if (cod[1] <= 5)
+                else if (cod[0] == 3 && cod[1] <= 5)
                 {
                     //then check if third position is no higher than 0 IF first position > 3 and second > 5
                     //redudent test case
@@ -209,38 +209,39 @@ public class Keypad_RotCode : MonoBehaviour {
         //if first position is greater than 3
         if (cod[0] >= 3)
         {
-            Debug.Log("inside cod[0] >= 3 ");
-            if (cod[0] > 3 && index > 3)
+            if (cod[0] >= 3 && index > 3)
             {
-
-                Debug.Log("inside cod[0] > 3 && index > 3 ");
                 //clear
                 delete();
                 text.GetComponent<Text>().text = errorText; // then show error output message
 
             }
-            else if (cod[0] > 3)
+            if (cod[0] > 3 && index == 3)
             {
-                if (index > 3)
-                {
+               
                     delete();
                     text.GetComponent<Text>().text = errorText; // then show error output message
-                }
+              
             }
-            else if (cod[0] == 3)
+            else if (cod[0] == 3 && index == 3)
             {
-                if (cod[1] > 5)
+                if (cod[0] == 3 && cod[1] > 5)
                 {
                     Debug.Log("in second else if statement");
                     //clear
                     delete();
                     text.GetComponent<Text>().text = errorText; // then show error output message
+                   
+                }
+                else if (cod[0] == 3 && index == 1)
+                {
+                    //let this happen?
+                    sortList();
 
                 }
                 else
                 {
 
-                    Debug.Log("just let it happen cod[0] == 3");
                     //let this happen?
                     sortList();
 
@@ -248,7 +249,6 @@ public class Keypad_RotCode : MonoBehaviour {
             }
             else
             {
-                Debug.Log("inside cod[0] >= 3  and sortList(); sent");
                 //let this happen?
                 sortList();
             }
