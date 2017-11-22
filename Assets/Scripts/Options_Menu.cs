@@ -104,7 +104,7 @@ public class Options_Menu : MonoBehaviour {
     //***************************************
     public void StoreButton()
     {
-        //Store_Button.Start();
+        Store_Button.StartCoroutine();
         Debug.Log("Store button");
     }
 
