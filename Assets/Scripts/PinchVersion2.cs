@@ -51,5 +51,8 @@ public class PinchVersion2 : MonoBehaviour
                 cam.fieldOfView = Mathf.Clamp(cam.fieldOfView, 0.1f, 10.9f);
             }
         }
+
+
+        
     }
 }
