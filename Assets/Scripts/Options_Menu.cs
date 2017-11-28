@@ -18,8 +18,18 @@ public class Options_Menu : MonoBehaviour {
     public Keypad_RotCode Keypad_RotCode;
     public Small_PlaneToggle SmallPlaneToggle;
     public Store_Button Store_Button;
-    
 
+    public Transform freqContent;
+    public Text myFreqText;
+
+    public Transform freqUnitContent;
+    public Text myFreqUnitText;
+
+    public Transform gainContentX;
+    public Text gainTextX;
+
+    public Transform gainContentY;
+    public Text gainTextY;
 
     [Header("Options UI Toggle")]
     public GameObject ui;
@@ -57,6 +67,16 @@ public class Options_Menu : MonoBehaviour {
     //***************************************
     //      Frequency
     //***************************************
+    public void UpdateFreqOnFreqButton(int myPassedFreqLocation)
+    {
+        string passedText1 = freqContent.GetChild(myPassedFreqLocation).GetChild(0).gameObject.GetComponent<Text>().text;
+        myFreqText.text = passedText1;
+    }
+    public void UpdateUnitOnFreqButton(int myPassedUnitLocation)
+    {
+        string passedText1 = freqUnitContent.GetChild(myPassedUnitLocation).GetChild(0).gameObject.GetComponent<Text>().text;
+        myFreqUnitText.text = passedText1;
+    }
     public void FrequencyButton()
     {
         //frequencyText.text = "Frequency: " + OptionsStats.Frequency.ToString() + "MHz";  //could do this
@@ -81,6 +101,18 @@ public class Options_Menu : MonoBehaviour {
     //***************************************
     //      Gain
     //***************************************
+    public void UpdateGainButtonX(int myPassedXGainLocation)
+    {
+        string passedText1 = gainContentX.GetChild(myPassedXGainLocation).GetChild(0).gameObject.GetComponent<Text>().text;
+        gainTextX.text = passedText1;
+    }
+
+    public void UpdateGainButtonY(int myPassedYGainLocation)
+    {
+        string passedText1 = gainContentY.GetChild(myPassedYGainLocation).GetChild(0).gameObject.GetComponent<Text>().text;
+        gainTextY.text = passedText1;
+    }
+
     public void GainButton()
     {
         ToggleGainMenu();

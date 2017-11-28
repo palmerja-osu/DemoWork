@@ -174,7 +174,6 @@ e7330eabccb15b19b9d36d281a1ea90e Assembly-CSharp.dll:UnityEngine.UI.Extensions.U
 148382f13d7cd2b3f34cff62345041ea Assembly-CSharp.dll:UnityEngine.UI.Extensions.UIPolygon
 401e07735d84028434a5956caab1a284 Assembly-CSharp.dll:UnityEngine.UI.Extensions.Examples.Example03Scene
 d63f24e7e506a0314a8cd3b2b9341d82 Assembly-CSharp.dll:UnityEngine.UI.Extensions.UIWindowBase
-503c02416189284acc13485b2d75da45 Assembly-CSharp.dll:UnityEngine.UI.Extensions.VerticalScrollSnap
 5ba43e6a9b3cc0cb2121185a88757d60 Assembly-CSharp.dll:UnityEngine.UI.Extensions.Examples.ScrollingCalendar
 1b22512f392272e01e1815ec85f9e287 Assembly-CSharp.dll:UnityEngine.UI.Extensions.TextPic
 3654469f2662afea6e30bd2df1e4ab28 Assembly-CSharp.dll:UnityEngine.UI.Extensions.ReorderableList
@@ -279,7 +278,7 @@ ec933a2ab5531523f501477c1dbcd874 Assembly-CSharp.dll:UnityEngine.UI.Extensions.S
 5d0b2f0ad0a91e310d57038f182ef601 Assembly-CSharp.dll:UnityEngine.UI.Extensions.ReorderableListDebug
 e1a0496be279761c019e7987f631deda Assembly-CSharp.dll:.Panel_Rotation
 5cd262d465738805a1448c080ee136f1 Assembly-CSharp.dll:UnityEngine.UI.Extensions.UIScrollToSelection
-b7492cf72edd054677b0d90bcd85a448 Assembly-CSharp.dll:.Options_Menu
+fd859a77b68edd9f1a40682d9b3a825b Assembly-CSharp.dll:.Options_Menu
 63b892668f32e9ba2cdf1de1cd202182 Assembly-CSharp.dll:UnityEngine.UI.Extensions.VRCursor
 7c7bfbba1453bc5671356c1c69875f56 Assembly-CSharp.dll:UnityEngine.UI.Extensions.RadialSlider
 2e2b24fa2d6c227d99da94d76de1ae59 Assembly-CSharp.dll:UnityEngine.UI.Extensions.UICornerCut
@@ -293,3 +292,6 @@ c838ea6b6945486d5994fc33c760fc6f Assembly-CSharp.dll:.contentScrollRect
 b15fb6ded837852428ffad873d313f36 Assembly-CSharp.dll:UnityEngine.UI.Extensions.DiamondGraph
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:UnityEngine.UI.Extensions.UIMultiplyEffect
 993d18819482b6007ae64c1273d7d553 Assembly-CSharp.dll:.PinchZoom
+503c02416189284acc13485b2d75da45 Assembly-CSharp.dll:UnityEngine.UI.Extensions.VerticalScrollSnap
+8e29fee8183289d30fed81332a154cdb Assembly-CSharp.dll:UnityEngine.UI.Extensions.FreqVerticalScrollSnap
+6a3fb2641541831955b03428a3224eed Assembly-CSharp.dll:UnityEngine.UI.Extensions.Freq_Units_VerticalScrollSnap

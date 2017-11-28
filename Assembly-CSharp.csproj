@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{DBE53C73-5E64-55EF-9E88-6C47A9A49BF7}</ProjectGuid>
+    <ProjectGuid>{24331716-18BC-BE42-775A-F4D05ACD3D6D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -53,6 +53,10 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\ChangeImages.cs" />
      <Compile Include="Assets\Scripts\contentScrollRect.cs" />
+     <Compile Include="Assets\Scripts\Freq_Units_VerticalScrollSnap.cs" />
+     <Compile Include="Assets\Scripts\FreqVerticalScrollSnap.cs" />
+     <Compile Include="Assets\Scripts\Gain_x_VerticalScrollSnap.cs" />
+     <Compile Include="Assets\Scripts\Gain_y_VerticalScrollSnap.cs" />
      <Compile Include="Assets\Scripts\ImageChanger.cs" />
      <Compile Include="Assets\Scripts\Keypad_Code.cs" />
      <Compile Include="Assets\Scripts\Keypad_RotCode.cs" />
