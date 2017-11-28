@@ -14,6 +14,7 @@ namespace UnityEngine.UI.Extensions
 
         public int myFreqUnitLocation;
         public Options_Menu Options_Menu;
+        public Text_Overlay Text_Overlay;
 
         void Start()
         {
@@ -62,6 +63,7 @@ namespace UnityEngine.UI.Extensions
                         //Matt added myCurrentLocation here 11/27/17
                         myFreqUnitLocation = GetPageforPosition(_screensContainer.localPosition);
                         Options_Menu.UpdateUnitOnFreqButton(myFreqUnitLocation);
+                        Text_Overlay.UpdateUnitFreq(myFreqUnitLocation);  //adding to I-plane overlay
                     }
                 }
             }

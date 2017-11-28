@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/pt2_Touch.unity
     guid: 292ab91dd460ad445b2e3be334afd483
+  - enabled: 1
+    path: Assets/left_touchscreen.unity
+    guid: b55179ad267f1f34bb598dd364ee9b12

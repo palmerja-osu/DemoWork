@@ -11,6 +11,7 @@ public class Keypad_RotCode : MonoBehaviour {
 
     [Header("Connecting Functions")]
     public Options_Menu Options_Menu;
+    public Text_Overlay Text_Overlay;
     public GameObject ui;
     public Small_PlaneToggle Small_PlaneToggle;
 
@@ -286,6 +287,7 @@ public class Keypad_RotCode : MonoBehaviour {
 
 
         Options_Menu.rotOutput(values);
+        Text_Overlay.rotOutput(values);
 
     }
     void returnOption()

@@ -72,6 +72,7 @@
      <Compile Include="Assets\Scripts\RotScrollSnap.cs" />
      <Compile Include="Assets\Scripts\Small_PlaneToggle.cs" />
      <Compile Include="Assets\Scripts\Store_Button.cs" />
+     <Compile Include="Assets\Scripts\Text_Overlay.cs" />
      <Compile Include="Assets\Scripts\Uniwest_Image.cs" />
      <Compile Include="Assets\Scripts\Uniwest_InfoPanel.cs" />
      <Compile Include="Assets\unity-ui-extensions\Examples\ComboBox\ComboBoxChanged.cs" />

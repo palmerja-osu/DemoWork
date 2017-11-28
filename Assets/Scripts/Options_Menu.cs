@@ -19,6 +19,13 @@ public class Options_Menu : MonoBehaviour {
     public Small_PlaneToggle SmallPlaneToggle;
     public Store_Button Store_Button;
 
+    
+
+    [Header("Options UI Toggle")]
+    public GameObject ui;
+
+
+    [Header("Menu Text")]
     public Transform freqContent;
     public Text myFreqText;
 
@@ -31,11 +38,6 @@ public class Options_Menu : MonoBehaviour {
     public Transform gainContentY;
     public Text gainTextY;
 
-    [Header("Options UI Toggle")]
-    public GameObject ui;
-
-
-    [Header("Menu Text")]
     public GameObject rotationText;
     public string rotationOutput;
 
@@ -87,7 +89,7 @@ public class Options_Menu : MonoBehaviour {
     public void FrequencyButton2()
     {
         SmallPlaneToggle.Toggle();
-        Panel_Freq.Update();
+        Panel_Freq.Toggle();
         Debug.Log("Frequency2 button");
     }
     //change menues
@@ -121,8 +123,9 @@ public class Options_Menu : MonoBehaviour {
 
     public void GainButton2()
     {
-        Panel_Gain.Update();
-        Debug.Log("Gain button");
+        SmallPlaneToggle.Toggle();
+        Panel_Gain.Toggle();
+        Debug.Log("Gain2 button");
     }
 
     private void ToggleGainMenu()
@@ -161,8 +164,8 @@ public class Options_Menu : MonoBehaviour {
     }
     public void RotationButton2()
     {
-        Keypad_RotCode.Update();
         SmallPlaneToggle.Toggle();
+        Keypad_RotCode.Toggle();
         Debug.Log("Open Rotation button");
     }
     private void ToggleRotation()
@@ -186,6 +189,10 @@ public class Options_Menu : MonoBehaviour {
     //***************************************
     
     public void PressedDisplayButton()
+    {
+        SceneManager.LoadScene("left_touchscreen");
+    }
+    public void PressedLeftDisplayButton()
     {
         SceneManager.LoadScene("pt2_Touch");
     }

@@ -13,7 +13,8 @@ namespace UnityEngine.UI.Extensions
     {
 
         public int myYGainLocation;
-        public Options_Menu Options_Menu; 
+        public Options_Menu Options_Menu;
+        public Text_Overlay Text_Overlay;
 
         void Start()
         {
@@ -62,6 +63,7 @@ namespace UnityEngine.UI.Extensions
                         //Matt added myCurrentLocation here 11/27/17
                         myYGainLocation = GetPageforPosition(_screensContainer.localPosition);
                         Options_Menu.UpdateGainButtonY(myYGainLocation);
+                        Text_Overlay.UpdateGainButtonY(myYGainLocation);  //adding to I-plane overlay
                     }
                 }
             }
