@@ -4939,7 +4939,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.7, y: 3}
-  m_SizeDelta: {x: 2044.9, y: 1536}
+  m_SizeDelta: {x: 2045, y: 1536}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &138813768
 GameObject:
@@ -8264,7 +8264,6 @@ GameObject:
   - component: {fileID: 268234831}
   - component: {fileID: 268234830}
   - component: {fileID: 268234829}
-  - component: {fileID: 268234833}
   - component: {fileID: 268234834}
   m_Layer: 0
   m_Name: Main Camera
@@ -8336,7 +8335,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &268234833
+--- !u!114 &268234834
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -8344,23 +8343,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 268234828}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da565f7719081f54b986a07c043d0aa6, type: 3}
+  m_Script: {fileID: 11500000, guid: f11edeef2c0690e45a21f2274918ee93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   perspectiveZoomSpeed: 0.5
   orthoZoomSpeed: 0.5
+  panSpeed: 8
+  maxZoom: 769
+  minZoom: 170
   cam: {fileID: 268234831}
---- !u!114 &268234834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 268234828}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f11edeef2c0690e45a21f2274918ee93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &270912533
 GameObject:
   m_ObjectHideFlags: 0
@@ -9375,7 +9366,7 @@ MonoBehaviour:
   ui: {fileID: 285011668}
   Panel_Freq: {fileID: 217654128}
   Panel_Gain: {fileID: 198217916}
-  Keypad_RotCode: {fileID: 0}
+  Keypad_RotCode: {fileID: 862754386}
 --- !u!1 &285423207
 GameObject:
   m_ObjectHideFlags: 0
@@ -29919,7 +29910,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_TargetDisplay: 0
 --- !u!224 &862754391
 RectTransform:
@@ -31480,8 +31471,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.2399902, y: -3}
-  m_SizeDelta: {x: 2047.9, y: 1536}
+  m_AnchoredPosition: {x: 0.34061, y: -0.000011444}
+  m_SizeDelta: {x: 2045, y: 1536}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &924143031
 MonoBehaviour:
@@ -51576,6 +51567,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f11edeef2c0690e45a21f2274918ee93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  perspectiveZoomSpeed: 0.5
+  orthoZoomSpeed: 0.5
+  panSpeed: 10
+  maxZoom: 0
+  minZoom: 0
+  cam: {fileID: 0}
 --- !u!1 &1533974603
 GameObject:
   m_ObjectHideFlags: 0

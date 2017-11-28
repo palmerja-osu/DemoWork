@@ -4,132 +4,84 @@ using UnityEngine;
 public class PinchZoom : MonoBehaviour
 {
 
-    private static readonly float PanSpeed = 10f;
-    private static readonly float ZoomSpeedTouch = 4f;
-    private static readonly float ZoomSpeedMouse = 5f;
+    public float perspectiveZoomSpeed = 0.5f;        // The rate of change of the field of view in perspective mode.
+    public float orthoZoomSpeed = 0.5f;        // The rate of change of the orthographic size in orthographic mode.
+    public float panSpeed = 10F;
+    public float maxZoom; //farthest you can get
+    public float minZoom; //closest you can get
 
-    private static readonly float[] BoundsX = new float[] { -1023f, 1023f };
-    private static readonly float[] BoundsZ = new float[] { -780f, 780f };
-    private static readonly float[] ZoomBounds = new float[] { 160f, 170.8f };
 
-    private Camera cam;
+    public Camera cam;
 
-    private Vector3 lastPanPosition;
-    private int panFingerId; // Touch mode only
-
-    private bool wasZoomingLastFrame; // Touch mode only
-    private Vector2[] lastZoomPositions; // Touch mode only
-
-    void Awake()
+    void Start()
     {
         cam = GetComponent<Camera>();
+        //maxZoom = Camera.main.orthographicSize * Screen.height / Screen.width * 2.0f;
     }
+
 
     void Update()
     {
-        if (Input.touchSupported && Application.platform != RuntimePlatform.WebGLPlayer)
-        {
-            HandleTouch();
-        }
-        else
-        {
-            HandleMouse();
-        }
-    }
 
-    void HandleTouch()
-    {
-        switch (Input.touchCount)
+        if (Input.touchCount == 2)
         {
 
-            case 1: // Panning
-                wasZoomingLastFrame = false;
+            Touch touchZero = Input.GetTouch(0);
+            Touch touchOne = Input.GetTouch(1);
 
-                // If the touch began, capture its position and its finger ID.
-                // Otherwise, if the finger ID of the touch doesn't match, skip it.
-                Touch touch = Input.GetTouch(0);
-                if (touch.phase == TouchPhase.Began)
-                {
-                    lastPanPosition = touch.position;
-                    panFingerId = touch.fingerId;
+
+            Vector2 touchZeroPrevPos = touchZero.position - touchZero.deltaPosition;
+            Vector2 touchOnePrevPos = touchOne.position - touchOne.deltaPosition;
+
+
+            float prevTouchDeltaMag = (touchZeroPrevPos - touchOnePrevPos).magnitude;
+            float touchDeltaMag = (touchZero.position - touchOne.position).magnitude;
+
+            //Find distances between each frame.
+            float deltaMagnitudeDiff = prevTouchDeltaMag - touchDeltaMag;
+
+            // If the camera is orthographic...
+            if (GetComponent<Camera>().orthographic)
+            {
+
+
+                float i = GetComponent<Camera>().orthographicSize + deltaMagnitudeDiff * orthoZoomSpeed;
+
+                //set the max and min of the scene
+                GetComponent<Camera>().fieldOfView += i * orthoZoomSpeed;
+                GetComponent<Camera>().fieldOfView = Mathf.Clamp(GetComponent<Camera>().fieldOfView, minZoom, maxZoom);
+
+                if (i >= maxZoom)
+                { //if i is greater than maxZoom, set camera to max
+                    GetComponent<Camera>().orthographicSize = maxZoom;
+
                 }
-                else if (touch.fingerId == panFingerId && touch.phase == TouchPhase.Moved)
-                {
-                    PanCamera(touch.position);
-                }
-                break;
-
-            case 2: // Zooming
-                Vector2[] newPositions = new Vector2[] { Input.GetTouch(0).position, Input.GetTouch(1).position };
-                if (!wasZoomingLastFrame)
-                {
-                    lastZoomPositions = newPositions;
-                    wasZoomingLastFrame = true;
+                else if (i <= minZoom)
+                { //same but with min
+                    GetComponent<Camera>().orthographicSize = minZoom;
                 }
                 else
-                {
-                    // Zoom based on the distance between the new positions compared to the 
-                    // distance between the previous positions.
-                    float newDistance = Vector2.Distance(newPositions[0], newPositions[1]);
-                    float oldDistance = Vector2.Distance(lastZoomPositions[0], lastZoomPositions[1]);
-                    float offset = newDistance - oldDistance;
-
-                    ZoomCamera(offset, ZoomSpeedTouch);
-
-                    lastZoomPositions = newPositions;
+                { //otherwise just update it to i
+                    GetComponent<Camera>().orthographicSize = i;
                 }
-                break;
 
-            default:
-                wasZoomingLastFrame = false;
-                break;
-        }
-    }
 
-    void HandleMouse()
-    {
-        // On mouse down, capture it's position.
-        // Otherwise, if the mouse is still down, pan the camera.
-        if (Input.GetMouseButtonDown(0))
-        {
-            lastPanPosition = Input.mousePosition;
-        }
-        else if (Input.GetMouseButton(0))
-        {
-            PanCamera(Input.mousePosition);
+            }
         }
 
-        // Check for scrolling to zoom the camera
-        float scroll = Input.GetAxis("Mouse ScrollWheel");
-        ZoomCamera(scroll, ZoomSpeedMouse);
+        ////to pan the camera
+        //if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
+        //{
+
+        //    Vector2 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
+        //    transform.position = new Vector2(Mathf.Clamp(touchDeltaPosition.x, -1500, 1500), Mathf.Clamp(touchDeltaPosition.y, -1500, 1500));
+
+        //    transform.Translate(-touchDeltaPosition.x * panSpeed * Time.deltaTime, -touchDeltaPosition.y * panSpeed * Time.deltaTime, 0);
+
+        //}
+
+
     }
 
-    void PanCamera(Vector3 newPanPosition)
-    {
-        // Determine how much to move the camera
-        Vector3 offset = cam.ScreenToViewportPoint(lastPanPosition - newPanPosition);
-        Vector3 move = new Vector3(offset.x * PanSpeed, 0, offset.y * PanSpeed);
 
-        // Perform the movement
-        transform.Translate(move, Space.World);
-
-        // Ensure the camera remains within bounds.
-        Vector3 pos = transform.position;
-        pos.x = Mathf.Clamp(transform.position.x, BoundsX[0], BoundsX[1]);
-        pos.z = Mathf.Clamp(transform.position.z, BoundsZ[0], BoundsZ[1]);
-        transform.position = pos;
-
-        // Cache the position
-        lastPanPosition = newPanPosition;
-    }
-
-    void ZoomCamera(float offset, float speed)
-    {
-        if (offset == 0)
-        {
-            return;
-        }
-
-        cam.fieldOfView = Mathf.Clamp(cam.fieldOfView - (offset * speed), ZoomBounds[0], ZoomBounds[1]);
-    }
 }

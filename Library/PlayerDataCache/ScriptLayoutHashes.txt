@@ -178,7 +178,6 @@ d63f24e7e506a0314a8cd3b2b9341d82 Assembly-CSharp.dll:UnityEngine.UI.Extensions.U
 5ba43e6a9b3cc0cb2121185a88757d60 Assembly-CSharp.dll:UnityEngine.UI.Extensions.Examples.ScrollingCalendar
 1b22512f392272e01e1815ec85f9e287 Assembly-CSharp.dll:UnityEngine.UI.Extensions.TextPic
 3654469f2662afea6e30bd2df1e4ab28 Assembly-CSharp.dll:UnityEngine.UI.Extensions.ReorderableList
-fb32d969613de9c619e45d4e7146262d Assembly-CSharp.dll:.PinchVersion2
 a465760b4eb751127542b19c6d955cb0 Assembly-CSharp.dll:UnityEngine.UI.Extensions.ScrollSnap
 e0baa44b919fd0acb99cda740dad17fb Assembly-CSharp.dll:UnityEngine.UI.Extensions.Examples.CooldownEffect_Image
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
@@ -216,6 +215,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 08f4f48b66a0fef3bdf14a46a1974e42 Assembly-CSharp.dll:UnityEngine.UI.Extensions.MonoSpacing
+940a3650dc0f7e948aa0fdde1eb251de Assembly-CSharp.dll:.Uniwest_InfoPanel
 1f2a5951df62b450b9be8f39128aa86a Assembly-CSharp.dll:UnityEngine.UI.Extensions.Accordion
 1bd73dc08780414ea7c06375d2fbc18e Assembly-CSharp.dll:UnityEngine.UI.Extensions.CylinderText
 ddcd2b40d3d4885ab7ea05050091eb6d Assembly-CSharp.dll:UnityEngine.UI.Extensions.ColorPicker.ColorSlider
@@ -241,6 +241,7 @@ dadcd445d9cdc517557624b8bd346ca4 Assembly-CSharp.dll:UnityEngine.UI.ExtensionsTo
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:UnityEngine.UI.Extensions.VRInputModule
 35a85271514203b44e5f0317c842c90b Assembly-CSharp.dll:UnityEngine.UI.Extensions.ScrollRectEx
+a964237f729e1ed840a9fc7baf9d0f28 Assembly-CSharp.dll:.Uniwest_Image
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 e88b1535e498cde3303c9fc7aef1c1ad Assembly-CSharp.dll:UnityEngine.UI.Extensions.TableLayoutGroup
 ee35e156e63325ceab69dd1025a30485 Assembly-CSharp.dll:UnityEngine.UI.Extensions.Examples.MainMenu
@@ -291,6 +292,4 @@ d0434a7cefad4aaf1892839fc0d97c2b Assembly-CSharp.dll:UnityEngine.UI.Extensions.S
 c838ea6b6945486d5994fc33c760fc6f Assembly-CSharp.dll:.contentScrollRect
 b15fb6ded837852428ffad873d313f36 Assembly-CSharp.dll:UnityEngine.UI.Extensions.DiamondGraph
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:UnityEngine.UI.Extensions.UIMultiplyEffect
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PinchZoom
-940a3650dc0f7e948aa0fdde1eb251de Assembly-CSharp.dll:.Uniwest_InfoPanel
-a964237f729e1ed840a9fc7baf9d0f28 Assembly-CSharp.dll:.Uniwest_Image
+993d18819482b6007ae64c1273d7d553 Assembly-CSharp.dll:.PinchZoom

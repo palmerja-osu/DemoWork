@@ -64,7 +64,6 @@
      <Compile Include="Assets\Scripts\Panel_HGain.cs" />
      <Compile Include="Assets\Scripts\Panel_Rotation.cs" />
      <Compile Include="Assets\Scripts\Panel_VGain.cs" />
-     <Compile Include="Assets\Scripts\PinchVersion2.cs" />
      <Compile Include="Assets\Scripts\PinchZoom.cs" />
      <Compile Include="Assets\Scripts\RotScrollSnap.cs" />
      <Compile Include="Assets\Scripts\Small_PlaneToggle.cs" />
