@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Change_2ndImage.cs" />
      <Compile Include="Assets\Scripts\ChangeImages.cs" />
      <Compile Include="Assets\Scripts\contentScrollRect.cs" />
      <Compile Include="Assets\Scripts\Freq_Units_VerticalScrollSnap.cs" />
@@ -69,6 +70,7 @@
      <Compile Include="Assets\Scripts\Panel_Rotation.cs" />
      <Compile Include="Assets\Scripts\Panel_VGain.cs" />
      <Compile Include="Assets\Scripts\PinchZoom.cs" />
+     <Compile Include="Assets\Scripts\rotatePlane.cs" />
      <Compile Include="Assets\Scripts\RotScrollSnap.cs" />
      <Compile Include="Assets\Scripts\Small_PlaneToggle.cs" />
      <Compile Include="Assets\Scripts\Store_Button.cs" />

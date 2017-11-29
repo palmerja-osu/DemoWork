@@ -13,6 +13,7 @@ public class Options_Menu : MonoBehaviour {
 
     //public Menu Menu;
     public ChangeImages changeImage;
+    public Change_2ndImage change_2ndImage;
     public Panel_Freq Panel_Freq;
     public Panel_Gain Panel_Gain;
     public Keypad_RotCode Keypad_RotCode;
@@ -63,7 +64,15 @@ public class Options_Menu : MonoBehaviour {
         Debug.Log("pressed display button");
     }
 
-    
+    public void PressedChannelButton2()
+    {
+
+        changeImage.changeImages();
+        change_2ndImage.changeImages();
+        Debug.Log("pressed display button");
+    }
+
+
 
 
     //***************************************
@@ -184,10 +193,18 @@ public class Options_Menu : MonoBehaviour {
         Debug.Log("pressed clear button");
     }
 
+    public void PressedClearButton2()
+    {
+
+        changeImage.ClearButtonimgCount();
+        change_2ndImage.ClearButtonimgCount2();
+        Debug.Log("pressed clear button");
+    }
+
     //***************************************
     //     Change Display Layout
     //***************************************
-    
+
     public void PressedDisplayButton()
     {
         SceneManager.LoadScene("left_touchscreen");

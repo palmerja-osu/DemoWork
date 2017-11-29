@@ -52401,7 +52401,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 6b400c14461d0e54f9cbfc00223146ac, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e6e6ed1ce84672747ac9c4741be5239c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -52427,11 +52427,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43b866fd6f8fddc44baa9b6b735157da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plane1: {fileID: 21300000, guid: 39e73816261e3e14187765498b6752b3, type: 3}
-  plane2: {fileID: 21300000, guid: 30b56af5b5d451448877678ac45dbc1c, type: 3}
-  plane3: {fileID: 21300000, guid: ca84e0f2f7d26cb45bd4f4529c246c17, type: 3}
-  plane4: {fileID: 21300000, guid: 8840746c26dcf6b4fa5d27393e0722ac, type: 3}
-  plane5: {fileID: 21300000, guid: 6b400c14461d0e54f9cbfc00223146ac, type: 3}
+  plane1: {fileID: 21300000, guid: e5d8f9213ae66974ebfabc9edb83fed2, type: 3}
+  plane2: {fileID: 21300000, guid: 60a35edb8ce02944a983d90de51cb250, type: 3}
+  plane3: {fileID: 21300000, guid: 6158bf82f1571ee468ad2d7ca48314b6, type: 3}
+  plane4: {fileID: 21300000, guid: 9d60c3868cd0f934ab892e36d77a430d, type: 3}
+  plane5: {fileID: 21300000, guid: e6e6ed1ce84672747ac9c4741be5239c, type: 3}
   Text_Overlay: {fileID: 1323872357}
   imgNumberCount: 1
 --- !u!212 &1533474396
@@ -57546,7 +57546,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 6b400c14461d0e54f9cbfc00223146ac,
+      objectReference: {fileID: 21300000, guid: e6e6ed1ce84672747ac9c4741be5239c,
         type: 3}
     - target: {fileID: 1136337176793278, guid: 9399cc57bbe05e94986ae4e9f1164aab, type: 2}
       propertyPath: m_IsActive

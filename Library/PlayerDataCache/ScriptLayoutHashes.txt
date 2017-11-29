@@ -224,6 +224,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 1bd73dc08780414ea7c06375d2fbc18e Assembly-CSharp.dll:UnityEngine.UI.Extensions.CylinderText
 ddcd2b40d3d4885ab7ea05050091eb6d Assembly-CSharp.dll:UnityEngine.UI.Extensions.ColorPicker.ColorSlider
 2812764adab4962e912837773b0635ed Assembly-CSharp.dll:UnityEngine.UI.Extensions.UIFlippable
+07d888d974f49ce0a9add357d8261759 Assembly-CSharp.dll:.Change_2ndImage
 93fd2214ad4e649a6b8ba3cf87a9f672 Assembly-CSharp.dll:.Small_PlaneToggle
 2b02ccec3dbb85649e62a2201f5c2c9a Assembly-CSharp.dll:UnityEngine.UI.Extensions.Examples.Example02ScrollView
 1ea8b19f1a4ceb2cba6e5a954942e5af Assembly-CSharp.dll:UnityEngine.UI.Extensions.Gradient
@@ -284,9 +285,10 @@ ec933a2ab5531523f501477c1dbcd874 Assembly-CSharp.dll:UnityEngine.UI.Extensions.S
 5d0b2f0ad0a91e310d57038f182ef601 Assembly-CSharp.dll:UnityEngine.UI.Extensions.ReorderableListDebug
 e1a0496be279761c019e7987f631deda Assembly-CSharp.dll:.Panel_Rotation
 5cd262d465738805a1448c080ee136f1 Assembly-CSharp.dll:UnityEngine.UI.Extensions.UIScrollToSelection
-bdc1ea870f740d6c6ce45ba7a946c322 Assembly-CSharp.dll:.Options_Menu
+cf22dc210b3f797db3bfa4451643f6cd Assembly-CSharp.dll:.Options_Menu
 63b892668f32e9ba2cdf1de1cd202182 Assembly-CSharp.dll:UnityEngine.UI.Extensions.VRCursor
 7c7bfbba1453bc5671356c1c69875f56 Assembly-CSharp.dll:UnityEngine.UI.Extensions.RadialSlider
+52493b564588a27af397fc83d29b2778 Assembly-CSharp.dll:.Text_Overlay
 2e2b24fa2d6c227d99da94d76de1ae59 Assembly-CSharp.dll:UnityEngine.UI.Extensions.UICornerCut
 c838ea6b6945486d5994fc33c760fc6f Assembly-CSharp.dll:.RotScrollSnap
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:UnityEngine.UI.Extensions.ToolTip
@@ -298,4 +300,4 @@ c838ea6b6945486d5994fc33c760fc6f Assembly-CSharp.dll:.contentScrollRect
 b15fb6ded837852428ffad873d313f36 Assembly-CSharp.dll:UnityEngine.UI.Extensions.DiamondGraph
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:UnityEngine.UI.Extensions.UIMultiplyEffect
 993d18819482b6007ae64c1273d7d553 Assembly-CSharp.dll:.PinchZoom
-52493b564588a27af397fc83d29b2778 Assembly-CSharp.dll:.Text_Overlay
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.rotatePlane
