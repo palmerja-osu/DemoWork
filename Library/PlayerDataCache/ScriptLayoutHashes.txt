@@ -148,7 +148,7 @@ bf4d4f7ab97df2e17e95663161b4c841 Assembly-CSharp.dll:.Panel_HGain
 ddad56a0cc275123771344136260487c Assembly-CSharp.dll:UnityEngine.UI.Extensions.ComboBox
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 503c02416189284acc13485b2d75da45 Assembly-CSharp.dll:UnityEngine.UI.Extensions.VerticalScrollSnap
-e4108c8263c32dec1a6702509f3a3f5e Assembly-CSharp.dll:.Keypad_RotCode
+5399e7a64ea25fad770f714b70a0d31c Assembly-CSharp.dll:.Keypad_RotCode
 5c1e60c21f2b0fc07f40e01adff98854 Assembly-CSharp.dll:UnityEngine.UI.Extensions.BoundTooltipTrigger
 dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
 bbd6745be7130eb348c565e55caf6bad Assembly-CSharp.dll:UnityEngine.UI.Extensions.ScrollConflictManager
@@ -300,4 +300,4 @@ c838ea6b6945486d5994fc33c760fc6f Assembly-CSharp.dll:.contentScrollRect
 b15fb6ded837852428ffad873d313f36 Assembly-CSharp.dll:UnityEngine.UI.Extensions.DiamondGraph
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:UnityEngine.UI.Extensions.UIMultiplyEffect
 993d18819482b6007ae64c1273d7d553 Assembly-CSharp.dll:.PinchZoom
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.rotatePlane
+26c14595199ad708f66e2b9358507389 Assembly-CSharp.dll:.rotatePlane

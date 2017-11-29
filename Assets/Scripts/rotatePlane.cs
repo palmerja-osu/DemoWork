@@ -6,9 +6,25 @@ public class rotatePlane : MonoBehaviour {
 
     public Options_Menu Options_Menu;
     public Text_Overlay Text_Overlay;
+    public Keypad_RotCode Keypad_RotCode;
 
     private float baseAngle = 0.0f;
 
+    [SerializeField]
+    float eulerAngX;
+    [SerializeField]
+    float eulerAngY;
+    [SerializeField]
+    float eulerAngZ;
+
+    void Update()
+    {
+
+        eulerAngX = transform.localEulerAngles.x;
+        eulerAngY = transform.localEulerAngles.y;
+        eulerAngZ = transform.localEulerAngles.z;
+
+    }
 
     public void updateRot(string keypadRot)
     {
@@ -16,31 +32,11 @@ public class rotatePlane : MonoBehaviour {
         Options_Menu.rotOutput(keypadRot);
         Text_Overlay.rotOutput(keypadRot);
 
+        float keyPadUpdate = float.Parse(keypadRot);
+        eulerAngZ = keyPadUpdate;
 
-        ////convert string to Vector3
-        //if (keypadRot.StartsWith("") && keypadRot.EndsWith(""))
-        //{
-        //    keypadRot = keypadRot.Substring(1, keypadRot.Length - 2);
-        //}
-
-        //// split the items
-        //string[] sArray = keypadRot.Split(',');
-
-        //// store as a Vector3
-        //Vector3 result = new Vector3(
-        //    float.Parse(sArray[0]),
-        //    float.Parse(sArray[1]),
-        //    float.Parse(sArray[2]));
-
-     
-       
-        Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
-        pos = Input.mousePosition - pos;
-       // pos = result; //set reult of string to new Vector3 as pos
-        float ang = Mathf.Atan2(pos.y, pos.x) * Mathf.Rad2Deg - baseAngle;
+        transform.Rotate(eulerAngX, eulerAngY, eulerAngZ);
         
-        
-        transform.rotation = Quaternion.AngleAxis(ang, Vector3.forward);
 
     }
 
@@ -59,16 +55,17 @@ public class rotatePlane : MonoBehaviour {
         pos = Input.mousePosition - pos;
         float ang = Mathf.Atan2(pos.y, pos.x) * Mathf.Rad2Deg - baseAngle;
         transform.rotation = Quaternion.AngleAxis(ang, Vector3.forward);
+
         
+        string rotationOutput = eulerAngZ.ToString("F0");
 
-
-        string rotationOutput = ang.ToString("F0");
-        //Debug.Log(rotationOutput);
-        Options_Menu.rotOutput(rotationOutput);
-        Text_Overlay.rotOutput(rotationOutput);
+     
+        Options_Menu.rotOutput(rotationOutput); //send touch update to options
+        Text_Overlay.rotOutput(rotationOutput); //send touch update to overlay
+        Keypad_RotCode.updateRotatePlane(rotationOutput); //update keypad with new touch
     }
 
-    
+
 
 
 }

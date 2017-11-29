@@ -121,6 +121,15 @@ public class Keypad_RotCode : MonoBehaviour {
         text.GetComponent<Text>().text = waitText;
     }
 
+    //update z plane when moving info from I-plane
+    //need to work on!!!!!!!!
+    public void updateRotatePlane(string rotValues)
+    {
+        var codNew = rotValues.Split(',').Select(Int32.Parse).ToList();
+        List<float> cod = codNew.Select<int, float>(i =>i).ToList();
+        Debug.Log(cod[0]);
+    }
+
     public void increaseCod(int num)
     {
  

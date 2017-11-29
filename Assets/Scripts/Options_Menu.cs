@@ -127,14 +127,12 @@ public class Options_Menu : MonoBehaviour {
     public void GainButton()
     {
         ToggleGainMenu();
-        Debug.Log("Gain button");
     }
 
     public void GainButton2()
     {
         SmallPlaneToggle.Toggle();
         Panel_Gain.Toggle();
-        Debug.Log("Gain2 button");
     }
 
     private void ToggleGainMenu()
@@ -149,7 +147,6 @@ public class Options_Menu : MonoBehaviour {
     public void StoreButton()
     {
         Store_Button.StartCoroutine();
-        Debug.Log("Store button");
     }
 
 
@@ -168,14 +165,12 @@ public class Options_Menu : MonoBehaviour {
     public void RotationButton()
     {
         ToggleRotation();
-        
-        Debug.Log("Open Rotation button");
+
     }
     public void RotationButton2()
     {
         SmallPlaneToggle.Toggle();
-        Keypad_RotCode.Toggle();
-        Debug.Log("Open Rotation button");
+        Keypad_RotCode.Toggle(); 
     }
     private void ToggleRotation()
     {
@@ -188,9 +183,7 @@ public class Options_Menu : MonoBehaviour {
     //***************************************
     public void PressedClearButton()
     {
-
         changeImage.ClearButtonimgCount();
-        Debug.Log("pressed clear button");
     }
 
     public void PressedClearButton2()
