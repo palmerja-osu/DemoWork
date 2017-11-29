@@ -14,6 +14,7 @@ public class Keypad_RotCode : MonoBehaviour {
     public Text_Overlay Text_Overlay;
     public GameObject ui;
     public Small_PlaneToggle Small_PlaneToggle;
+    public rotatePlane rotatePlane;
 
 
     [Header("Keypad Num ref")]
@@ -35,7 +36,7 @@ public class Keypad_RotCode : MonoBehaviour {
     private string waitText = "";
     private string errorText = "Error: >=360";
 
-    List<int> cod = new List<int>();
+    List<float> cod = new List<float>();
     int index = 0;
 
     public object Class1 { get; private set; }
@@ -267,7 +268,8 @@ public class Keypad_RotCode : MonoBehaviour {
 
     void sortList()
     {
-       
+     
+
         //rewrite List to a string
         //this overload calls ToString() on each input element): string.Join(",", ints)
         var stringsArray = cod.Select(i => i.ToString()).ToArray();
@@ -285,9 +287,9 @@ public class Keypad_RotCode : MonoBehaviour {
             returnOption();
         }
 
-
-        Options_Menu.rotOutput(values);
-        Text_Overlay.rotOutput(values);
+        rotatePlane.updateRot(values);
+        //Options_Menu.rotOutput(values);
+        //Text_Overlay.rotOutput(values);
 
     }
     void returnOption()

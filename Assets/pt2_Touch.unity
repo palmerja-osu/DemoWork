@@ -37008,7 +37008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43bc7cde51b3aa443963c0af8a78e39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeImage: {fileID: 0}
+  changeImage: {fileID: 1150803358}
   change_2ndImage: {fileID: 285011673}
   Panel_Freq: {fileID: 217654128}
   Panel_Gain: {fileID: 198217916}
@@ -44743,8 +44743,9 @@ GameObject:
   - component: {fileID: 1150803356}
   - component: {fileID: 1150803355}
   - component: {fileID: 1150803357}
+  - component: {fileID: 1150803358}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Change_Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44756,17 +44757,17 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1150803353}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.42261827, w: 0.9063079}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1964522815}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 50}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.036, y: -0.0122}
-  m_SizeDelta: {x: 1.1321, y: 1.0191}
+  m_AnchoredPosition: {x: 0.07, y: -0.063}
+  m_SizeDelta: {x: 1.13, y: 1.2699}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1150803355
 MonoBehaviour:
@@ -44821,6 +44822,24 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 5
   m_TargetDisplay: 0
+--- !u!114 &1150803358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1150803353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43b866fd6f8fddc44baa9b6b735157da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plane1: {fileID: 21300000, guid: d7e5094614864634da1044f6b717dd88, type: 3}
+  plane2: {fileID: 21300000, guid: 52a9c6fb8a1d4a147956e14221b4ba73, type: 3}
+  plane3: {fileID: 21300000, guid: 604341c1836cffc44a5e566ebe9a53c7, type: 3}
+  plane4: {fileID: 21300000, guid: fd349a711e1db494da8f1fbcae3d29db, type: 3}
+  plane5: {fileID: 21300000, guid: 0b10304f5522e0b4a955cb14934b68a2, type: 3}
+  Text_Overlay: {fileID: 126628621}
+  imgNumberCount: 0
 --- !u!1 &1151715993
 GameObject:
   m_ObjectHideFlags: 0
@@ -57918,7 +57937,7 @@ GameObject:
   - component: {fileID: 1533474394}
   - component: {fileID: 1533474393}
   m_Layer: 5
-  m_Name: Change Image
+  m_Name: Change Image_Overlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63428,7 +63447,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1136337176793278, guid: 9399cc57bbe05e94986ae4e9f1164aab, type: 2}
       propertyPath: m_Name
-      value: Change Image
+      value: Change Image_Overlay
       objectReference: {fileID: 0}
     - target: {fileID: 114154966661355450, guid: 9399cc57bbe05e94986ae4e9f1164aab,
         type: 2}
@@ -75470,7 +75489,7 @@ GameObject:
   - component: {fileID: 1964522817}
   - component: {fileID: 1964522816}
   m_Layer: 5
-  m_Name: Cube
+  m_Name: Change_image_Touch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75483,8 +75502,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1964522814}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.7, y: 30.8, z: 0}
-  m_LocalScale: {x: 473.19186, y: 293.88467, z: 1}
+  m_LocalPosition: {x: 1, y: 1, z: 0}
+  m_LocalScale: {x: 604.0653, y: 406.07797, z: 1}
   m_Children:
   - {fileID: 1150803354}
   m_Father: {fileID: 1533474392}
@@ -75515,7 +75534,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ea5577368502ada4eb01f6c82d6c88ee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
