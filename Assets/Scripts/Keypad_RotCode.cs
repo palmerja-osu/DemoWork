@@ -127,7 +127,7 @@ public class Keypad_RotCode : MonoBehaviour {
     {
         var codNew = rotValues.Split(',').Select(Int32.Parse).ToList();
         List<float> cod = codNew.Select<int, float>(i =>i).ToList();
-        Debug.Log(cod[0]);
+        Debug.Log("updateRotatePlane" + cod[0]);
     }
 
     public void increaseCod(int num)
