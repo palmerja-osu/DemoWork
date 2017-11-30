@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System;
 using UnityEngine.SceneManagement;
+using System.Text.RegularExpressions;
 
 public class Keypad_RotCode : MonoBehaviour {
 
@@ -36,7 +37,7 @@ public class Keypad_RotCode : MonoBehaviour {
     private string waitText = "";
     private string errorText = "Error: >=360";
 
-    List<float> cod = new List<float>();
+    List<int> cod = new List<int>();
     int index = 0;
 
     public object Class1 { get; private set; }
@@ -125,14 +126,28 @@ public class Keypad_RotCode : MonoBehaviour {
     //need to work on!!!!!!!!
     public void updateRotatePlane(string rotValues)
     {
+
+       
+        delete();
+
         var codNew = rotValues.Split(',').Select(Int32.Parse).ToList();
-        List<float> cod = codNew.Select<int, float>(i =>i).ToList();
-        Debug.Log("updateRotatePlane" + cod[0]);
+        cod.Add(codNew[0]);
+        text.GetComponent<Text>().text += codNew[0];
+        
+
+        
     }
 
     public void increaseCod(int num)
     {
- 
+        
+        //if updateRotatePlane has sent information as codNew passes through 
+        //isEmpty bool, therefore add something to makesure line is clear when
+        //list is empty upon keypad input
+        if(index == 0)
+        {
+            delete();
+        }
  
         if (index < 3)
         {
@@ -143,6 +158,7 @@ public class Keypad_RotCode : MonoBehaviour {
             {
                 delete();
             }
+            
 
             cod.Add(num);
             index++;
@@ -200,8 +216,7 @@ public class Keypad_RotCode : MonoBehaviour {
             else
             {
                 //send to rotOutput in Options_Menu
-                Debug.Log("List is OKAY");
-
+               //list is okay
 
             }
 
