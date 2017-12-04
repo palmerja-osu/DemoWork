@@ -38,7 +38,6 @@ public class Panel_Gain : MonoBehaviour
     {
         Toggle();
         returnToOptions();
-        Debug.Log("pressed exit button");
     }
     
     //exit button for second scene
@@ -47,7 +46,6 @@ public class Panel_Gain : MonoBehaviour
         Toggle();
         returnToOptions();
         Small_PlaneSwitch();
-        Debug.Log("pressed exit button");
     }
 
     //***************************************
@@ -66,12 +64,9 @@ public class Panel_Gain : MonoBehaviour
     public void gainXButton()
     {
         
-        Debug.Log("middleXButton was pressed");
         //press button send to gain keypad
         keypad_XgainCode.Update();
-       
-
-
+        keypad_XgainCode.Start();
     }
 
     public void plus6_XButton()
@@ -86,6 +81,7 @@ public class Panel_Gain : MonoBehaviour
             if(colorSwitchTrue == 1)
             {
                 keypad_YgainCode.plus6dB_y(gainXNum);
+                UpdateYValue(gainXNum);
             }
         }
         else
@@ -95,6 +91,7 @@ public class Panel_Gain : MonoBehaviour
             if (colorSwitchTrue == 1)
             {
                 keypad_YgainCode.plus6dB_y(gainXNum);
+                UpdateYValue(gainXNum);
             }
         }
     }
@@ -110,6 +107,7 @@ public class Panel_Gain : MonoBehaviour
             if (colorSwitchTrue == 1)
             {
                 keypad_YgainCode.plus6dB_y(gainXNum);
+                UpdateYValue(gainXNum);
             }
         }
         else
@@ -119,6 +117,7 @@ public class Panel_Gain : MonoBehaviour
             if (colorSwitchTrue == 1)
             {
                 keypad_YgainCode.plus6dB_y(gainXNum);
+                UpdateYValue(gainXNum);
             }
         }
     }
@@ -134,6 +133,7 @@ public class Panel_Gain : MonoBehaviour
             if (colorSwitchTrue == 1)
             {
                 keypad_YgainCode.plus6dB_y(gainXNum);
+                UpdateYValue(gainXNum);
             }
         }
         else
@@ -143,6 +143,7 @@ public class Panel_Gain : MonoBehaviour
             if (colorSwitchTrue == 1)
             {
                 keypad_YgainCode.plus6dB_y(gainXNum);
+                UpdateYValue(gainXNum);
             }
         }
     }
@@ -158,6 +159,7 @@ public class Panel_Gain : MonoBehaviour
             if (colorSwitchTrue == 1)
             {
                 keypad_YgainCode.plus6dB_y(gainXNum);
+                UpdateYValue(gainXNum);
             }
         }
         else
@@ -167,6 +169,7 @@ public class Panel_Gain : MonoBehaviour
             if (colorSwitchTrue == 1)
             {
                 keypad_YgainCode.plus6dB_y(gainXNum);
+                UpdateYValue(gainXNum);
             }
         }
            
@@ -190,12 +193,10 @@ public class Panel_Gain : MonoBehaviour
 
     public void gainYButton()
     {
-
-        Debug.Log("middleXButton was pressed");
+        
         //press button send to gain keypad
         keypad_YgainCode.Update();
-
-
+        keypad_YgainCode.Start();
     }
 
     public void plus6_YButton()
@@ -210,6 +211,7 @@ public class Panel_Gain : MonoBehaviour
             if (colorSwitchTrue == 1)
             {
                 keypad_XgainCode.plus6dB_x(gainYNum);
+                UpdateXValue(gainYNum);
             }
         }
         else
@@ -219,6 +221,7 @@ public class Panel_Gain : MonoBehaviour
             if (colorSwitchTrue == 1)
             {
                 keypad_XgainCode.plus6dB_x(gainYNum);
+                UpdateXValue(gainYNum);
             }
         }
     }
@@ -234,6 +237,7 @@ public class Panel_Gain : MonoBehaviour
             if (colorSwitchTrue == 1)
             {
                 keypad_XgainCode.plus6dB_x(gainYNum);
+                UpdateXValue(gainYNum);
             }
         }
         else
@@ -243,6 +247,7 @@ public class Panel_Gain : MonoBehaviour
             if (colorSwitchTrue == 1)
             {
                 keypad_XgainCode.plus6dB_x(gainYNum);
+                UpdateXValue(gainYNum);
             }
         }
     }
@@ -258,6 +263,7 @@ public class Panel_Gain : MonoBehaviour
             if (colorSwitchTrue == 1)
             {
                 keypad_XgainCode.plus6dB_x(gainYNum);
+                UpdateXValue(gainYNum);
             }
         }
         else
@@ -267,6 +273,7 @@ public class Panel_Gain : MonoBehaviour
             if (colorSwitchTrue == 1)
             {
                 keypad_XgainCode.plus6dB_x(gainYNum);
+                UpdateXValue(gainYNum);
             }
         }
     }
@@ -282,6 +289,7 @@ public class Panel_Gain : MonoBehaviour
             if (colorSwitchTrue == 1)
             {
                 keypad_XgainCode.plus6dB_x(gainYNum);
+                UpdateXValue(gainYNum);
             }
         }
         else
@@ -291,6 +299,7 @@ public class Panel_Gain : MonoBehaviour
             if (colorSwitchTrue == 1)
             {
                 keypad_XgainCode.plus6dB_x(gainYNum);
+                UpdateXValue(gainYNum);
             }
         }
 

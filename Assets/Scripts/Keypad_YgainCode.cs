@@ -41,7 +41,7 @@ public class Keypad_YgainCode : MonoBehaviour {
     //text field for display of typing
     public GameObject text;
     //text for initial display
-    private string waitText = "30.0";
+    //private string waitText = "30.0";
     //text for error message... formating
     private string errorText = "format: _ _ _ . _";
     //error bit.  Toggles between 1 and 0.  0 no error, 1 for error found
@@ -74,10 +74,15 @@ public class Keypad_YgainCode : MonoBehaviour {
         Panel_Gain_Obj.SetActive(false);
 
     }
-    void Start()
+    public void Start()
     {
-        text.GetComponent<Text>().text = waitText;
+        //added
+        delete();
+        text.GetComponent<Text>().text = yText.text;
+        doneBit = 1;
+        
     }
+
 
     public void receiveSignal(GameObject go)
     {
@@ -139,7 +144,15 @@ public class Keypad_YgainCode : MonoBehaviour {
             string combinedString = string.Join("", cod.ToArray());
             
             //no change made or blank
-            if (combinedString == ""){
+            if (combinedString == "" || combinedString == myUpdatedTextElement){
+                Toggle();
+                //then re-initialize
+                Panel_Gain.Update();
+                index = 0;
+                foundDecimal = 0;
+                numPressed = 0;
+                doneBit = 1;
+                
                 return;
             }
             
@@ -176,7 +189,7 @@ public class Keypad_YgainCode : MonoBehaviour {
         index = 0;
         foundDecimal = 0;
         numPressed = 0;
-        text.GetComponent<Text>().text = waitText;
+        text.GetComponent<Text>().text = "";
         //text.GetComponent<Text>().text = temp.Count.ToString();
 
     }
@@ -184,6 +197,13 @@ public class Keypad_YgainCode : MonoBehaviour {
     //public void increaseCod(int num, string info)
     public void increaseCod(string addText)
     {
+        //if updateRotatePlane has sent information as codNew passes through 
+        //isEmpty bool, therefore add something to makesure line is clear when
+        //list is empty upon keypad input
+        //if (index == 0)
+        //{
+        //    delete();
+        //}
         if (index < 5)
         {
             if (addText == "." && foundDecimal == 1)
@@ -211,7 +231,7 @@ public class Keypad_YgainCode : MonoBehaviour {
             {
 
 
-                if (errorFlag == 1 || text.GetComponent<Text>().text == waitText || doneBit == 1)
+                if (errorFlag == 1 || doneBit == 1)
                 {
                     delete();
                     text.GetComponent<Text>().text = "";
@@ -231,7 +251,7 @@ public class Keypad_YgainCode : MonoBehaviour {
             {
                 //if the index is empty, make sure
                 //Removes cod from adding to the end of errorText
-                if (errorFlag == 1 || text.GetComponent<Text>().text == waitText || doneBit == 1)
+                if (errorFlag == 1 || doneBit == 1)
                 {
                     delete();
                     text.GetComponent<Text>().text = "";
@@ -354,7 +374,7 @@ public class Keypad_YgainCode : MonoBehaviour {
 
     private bool FormatChecker()
     {
-        string element = string.Join("", temp.ToArray());
+        //string element = string.Join("", temp.ToArray());
 
         if (temp.Count == 5)
         //******xxx.xx

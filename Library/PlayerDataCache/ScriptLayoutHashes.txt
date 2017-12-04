@@ -65,9 +65,10 @@ f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 86d36c43c53541d667100dc90b89cfba UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 1b8c02d0aa82fbf036a2b9b2d713eec3 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
 eb27bd261c2165b345d0a3e243d84e4d Assembly-CSharp.dll:UnityEngine.UI.Extensions.ReorderableListElement
+dfbd54e025706d7b3f8109d42b026e18 Assembly-CSharp.dll:.Keypad_YgainCode
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:UnityEngine.UI.Extensions.RaycastMask
 503c02416189284acc13485b2d75da45 Assembly-CSharp.dll:UnityEngine.UI.Extensions.HorizontalScrollSnap
-a902e02e81eb8cb9b6014399eccc57e0 Assembly-CSharp.dll:.Panel_Gain
+4a6b4bf77b077492e319687720a1c8b7 Assembly-CSharp.dll:.Panel_Gain
 d30b6110947d63791771ef8e8c2a83ba Assembly-CSharp.dll:UnityEngine.UI.Extensions.ShineEffect
 ee35e156e63325ceab69dd1025a30485 Assembly-CSharp.dll:UnityEngine.UI.Extensions.Examples.GameMenu
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
@@ -165,6 +166,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 503c02416189284acc13485b2d75da45 Assembly-CSharp.dll:UnityEngine.UI.Extensions.ScrollSnapBase
 b4277c999b1b49aa631b87f6a12b3055 Assembly-CSharp.dll:UnityEngine.UI.Extensions.UIVerticalScroller
 5669ff46bf5a6aedcbcd7e7f23ee4bb9 Assembly-CSharp.dll:UnityEngine.UI.Extensions.CooldownButton
+26c14595199ad708f66e2b9358507389 Assembly-CSharp.dll:.rotatePlane
 e583389c14465409c921a33eae490dc3 Assembly-CSharp.dll:.keypadNum
 21391bb14804e5c766761150dc079207 Assembly-CSharp.dll:UnityEngine.UI.Extensions.CurvedLayout
 8c2499f62b33d63ea0ad77eab1be063a Assembly-CSharp.dll:UnityEngine.UI.Extensions.ColorPicker.HexColorField
@@ -254,6 +256,7 @@ ee35e156e63325ceab69dd1025a30485 Assembly-CSharp.dll:UnityEngine.UI.Extensions.E
 a36d6541b3ca9c61d7938dcd4cc9cdf0 Assembly-CSharp.dll:UnityEngine.UI.Extensions.LetterSpacing
 cde49f8b65b330a3d5a092cd8f503d03 Assembly-CSharp.dll:UnityEngine.UI.Extensions.InputFieldEnterSubmit
 637d9c63f1b13e88562f25a79473a1f9 Assembly-CSharp.dll:UnityEngine.UI.Extensions.TileSizeFitter
+d6a6822d2ae73e19fdbf0cb66e5dc80c Assembly-CSharp.dll:.Keypad_XgainCode
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInput
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
@@ -285,7 +288,7 @@ ec933a2ab5531523f501477c1dbcd874 Assembly-CSharp.dll:UnityEngine.UI.Extensions.S
 5d0b2f0ad0a91e310d57038f182ef601 Assembly-CSharp.dll:UnityEngine.UI.Extensions.ReorderableListDebug
 e1a0496be279761c019e7987f631deda Assembly-CSharp.dll:.Panel_Rotation
 5cd262d465738805a1448c080ee136f1 Assembly-CSharp.dll:UnityEngine.UI.Extensions.UIScrollToSelection
-cf22dc210b3f797db3bfa4451643f6cd Assembly-CSharp.dll:.Options_Menu
+6cc9258b082e31a04df13471861e9620 Assembly-CSharp.dll:.Options_Menu
 63b892668f32e9ba2cdf1de1cd202182 Assembly-CSharp.dll:UnityEngine.UI.Extensions.VRCursor
 7c7bfbba1453bc5671356c1c69875f56 Assembly-CSharp.dll:UnityEngine.UI.Extensions.RadialSlider
 52493b564588a27af397fc83d29b2778 Assembly-CSharp.dll:.Text_Overlay
@@ -300,4 +303,3 @@ c838ea6b6945486d5994fc33c760fc6f Assembly-CSharp.dll:.contentScrollRect
 b15fb6ded837852428ffad873d313f36 Assembly-CSharp.dll:UnityEngine.UI.Extensions.DiamondGraph
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:UnityEngine.UI.Extensions.UIMultiplyEffect
 993d18819482b6007ae64c1273d7d553 Assembly-CSharp.dll:.PinchZoom
-26c14595199ad708f66e2b9358507389 Assembly-CSharp.dll:.rotatePlane

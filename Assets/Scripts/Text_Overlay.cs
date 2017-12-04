@@ -44,15 +44,24 @@ public class Text_Overlay : MonoBehaviour {
 
     public void UpdateGainButtonX(int myPassedXGainLocation)
     {
+        Debug.Log("updateGainButtonX location");
         string passedText1 = gainContentX.GetChild(myPassedXGainLocation).GetChild(0).gameObject.GetComponent<Text>().text;
         gainTextXOutput.text = passedText1;
     }
     public void UpdateGainButtonY(int myPassedYGainLocation)
     {
+        
         string passedText1 = gainContentY.GetChild(myPassedYGainLocation).GetChild(0).gameObject.GetComponent<Text>().text;
         gainTextYOutput.text = passedText1;
     }
-
+    public void optionsGainButtonX(string optionsUpdateX)
+    {
+        gainTextXOutput.text = optionsUpdateX;
+    }
+    public void optionsGainButtonY(string optionsUpdateY)
+    {
+        gainTextYOutput.text = optionsUpdateY;
+    }
     public void rotOutput(string rotOut)
     {
 

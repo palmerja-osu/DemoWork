@@ -40,7 +40,7 @@ public class Keypad_XgainCode : MonoBehaviour {
     //text field for display of typing
     public GameObject text;
     //text for initial display
-    private string waitText = "30.0";
+    //private string waitText = "30.0";
     //text for error message... formating
     private string errorText = "format: _ _ _ . _";
     //error bit.  Toggles between 1 and 0.  0 no error, 1 for error found
@@ -73,10 +73,15 @@ public class Keypad_XgainCode : MonoBehaviour {
         Panel_Gain_Obj.SetActive(false);
 
     }
-    void Start()
+    public void Start()
     {
-        text.GetComponent<Text>().text = waitText;
+        //added
+        delete();
+        text.GetComponent<Text>().text = xText.text;
+        doneBit = 1;
+        //text.GetComponent<Text>().text = waitText;
     }
+
 
     public void receiveSignal(GameObject go)
     {
@@ -145,6 +150,7 @@ public class Keypad_XgainCode : MonoBehaviour {
                 index = 0;
                 foundDecimal = 0;
                 numPressed = 0;
+                doneBit = 1;
 
                 return;
             }
@@ -182,13 +188,20 @@ public class Keypad_XgainCode : MonoBehaviour {
         index = 0;
         foundDecimal = 0;
         numPressed = 0;
-        text.GetComponent<Text>().text = waitText;
+        text.GetComponent<Text>().text = "";
 
     }
 
     //public void increaseCod(int num, string info)
     public void increaseCod(string addText)
     {
+        //if updateRotatePlane has sent information as codNew passes through 
+        //isEmpty bool, therefore add something to makesure line is clear when
+        //list is empty upon keypad input
+        //if (index == 0)
+        //{
+        //    delete();
+        //}
         if (index < 5)
         {
             if (addText == "." && foundDecimal == 1)
@@ -216,7 +229,7 @@ public class Keypad_XgainCode : MonoBehaviour {
             {
 
 
-                if (errorFlag == 1 || text.GetComponent<Text>().text == waitText || doneBit == 1)
+                if (errorFlag == 1  || doneBit == 1)
                 {
                     delete();
                     text.GetComponent<Text>().text = "";
@@ -236,7 +249,7 @@ public class Keypad_XgainCode : MonoBehaviour {
             {
                 //if the index is empty, make sure
                 //Removes cod from adding to the end of errorText
-                if (errorFlag == 1 || text.GetComponent<Text>().text == waitText || doneBit == 1)
+                if (errorFlag == 1 || doneBit == 1)
                 {
                     delete();
                     text.GetComponent<Text>().text = "";
@@ -356,7 +369,7 @@ public class Keypad_XgainCode : MonoBehaviour {
 
     private bool FormatChecker()
     {
-        string element = string.Join("", temp.ToArray());
+        //string element = string.Join("", temp.ToArray());
 
         if (temp.Count == 5)
         //******xxx.xx

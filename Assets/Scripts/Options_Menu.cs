@@ -19,6 +19,7 @@ public class Options_Menu : MonoBehaviour {
     public Keypad_RotCode Keypad_RotCode;
     public Small_PlaneToggle SmallPlaneToggle;
     public Store_Button Store_Button;
+    public Text_Overlay Text_Overlay;
 
     // Gain Keypad
     public Keypad_XgainCode Keypad_XgainCode;
@@ -82,6 +83,7 @@ public class Options_Menu : MonoBehaviour {
     //***************************************
     public void UpdateFreqOnFreqButton(int myPassedFreqLocation)
     {
+        
         string passedText1 = freqContent.GetChild(myPassedFreqLocation).GetChild(0).gameObject.GetComponent<Text>().text;
         myFreqText.text = passedText1;
     }
@@ -116,37 +118,43 @@ public class Options_Menu : MonoBehaviour {
     //***************************************
     public void UpdateGainButtonX(int myPassedXGainLocation)
     {
+        //send to text_Overlay X  location
+        Text_Overlay.UpdateGainButtonX(myPassedXGainLocation);
         string passedText1 = gainContentX.GetChild(myPassedXGainLocation).GetChild(0).gameObject.GetComponent<Text>().text;
         gainTextX.text = passedText1;
     }
 
     public void UpdateGainButtonY(int myPassedYGainLocation)
     {
+        
+        //send to text_Overlay X  location
+        
         string passedText1 = gainContentY.GetChild(myPassedYGainLocation).GetChild(0).gameObject.GetComponent<Text>().text;
         gainTextY.text = passedText1;
     }
 
     public void GainXText(string myPassedXtext)
     {
+        Text_Overlay.optionsGainButtonX(myPassedXtext);
         gainTextX.text = myPassedXtext;
     }
 
     public void GainYText(string myPassedYtext)
     {
+        
+        Text_Overlay.optionsGainButtonY(myPassedYtext);
         gainTextY.text = myPassedYtext;
     }
 
     public void GainButton()
     {
         ToggleGainMenu();
-        Debug.Log("Gain button");
     }
 
     public void GainButton2()
     {
         SmallPlaneToggle.Toggle();
         Panel_Gain.Toggle();
-        Debug.Log("Gain2 button");
     }
 
     private void ToggleGainMenu()
