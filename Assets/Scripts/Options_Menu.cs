@@ -20,7 +20,9 @@ public class Options_Menu : MonoBehaviour {
     public Small_PlaneToggle SmallPlaneToggle;
     public Store_Button Store_Button;
 
-    
+    // Gain Keypad
+    public Keypad_XgainCode Keypad_XgainCode;
+    public Keypad_YgainCode Keypad_YgainCode;
 
     [Header("Options UI Toggle")]
     public GameObject ui;
@@ -124,15 +126,27 @@ public class Options_Menu : MonoBehaviour {
         gainTextY.text = passedText1;
     }
 
+    public void GainXText(string myPassedXtext)
+    {
+        gainTextX.text = myPassedXtext;
+    }
+
+    public void GainYText(string myPassedYtext)
+    {
+        gainTextY.text = myPassedYtext;
+    }
+
     public void GainButton()
     {
         ToggleGainMenu();
+        Debug.Log("Gain button");
     }
 
     public void GainButton2()
     {
         SmallPlaneToggle.Toggle();
         Panel_Gain.Toggle();
+        Debug.Log("Gain2 button");
     }
 
     private void ToggleGainMenu()
