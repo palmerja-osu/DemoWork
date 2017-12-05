@@ -178,6 +178,7 @@ public class Options_Menu : MonoBehaviour {
 
     public void rotOutput(float rotOut)
     {
+
         rotationOutput = rotOut.ToString("F0");
 
         rotationText.GetComponent<Text>().text = "Rotation: " + rotationOutput + " Deg";

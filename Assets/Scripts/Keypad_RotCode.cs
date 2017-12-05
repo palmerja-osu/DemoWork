@@ -127,7 +127,11 @@ public class Keypad_RotCode : MonoBehaviour {
     public void updateRotatePlane(float rotValues)
     {
 
-        
+        //inverse the output
+        rotValues = rotValues - 360;
+        if (rotValues < 0)
+            rotValues = rotValues * -1;
+
         delete();
 
         string rotationOutput = rotValues.ToString("F0");

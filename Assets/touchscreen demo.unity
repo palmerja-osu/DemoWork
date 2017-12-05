@@ -10878,7 +10878,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Rotation: 100'
+  m_Text: 'Rotation: 0 Deg'
 --- !u!222 &1125954234
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -64,10 +64,12 @@ public class rotatePlane : MonoBehaviour {
         Options_Menu.rotOutput(Mathf.Abs(eulerAngZ - 360)); //send touch update to options
         Text_Overlay.rotOutput(Mathf.Abs(eulerAngZ - 360)); //send touch update to overlay
 
-   
+
+
+        
         //convert to string
         //string rotationOutput = eulerAngZ.ToString("F0");
-        Keypad_RotCode.updateRotatePlane(ang); //update keypad with new touch
+        Keypad_RotCode.updateRotatePlane(Mathf.Abs(ang + 360)); //update keypad with new touch
     }
 
 
