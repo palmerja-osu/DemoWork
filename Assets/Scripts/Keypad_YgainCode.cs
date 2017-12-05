@@ -208,7 +208,7 @@ public class Keypad_YgainCode : MonoBehaviour {
         {
             if (addText == "." && foundDecimal == 1)
             {
-                formatError(1);
+                //formatError(1);
                 return;
             }
 
@@ -223,7 +223,7 @@ public class Keypad_YgainCode : MonoBehaviour {
 
             if (foundDecimal == 2)
             {
-                formatError(1);
+                //formatError(1);
                 return;
             }
 

@@ -9,6 +9,7 @@ public class rotatePlane : MonoBehaviour {
     public Keypad_RotCode Keypad_RotCode;
 
     private float baseAngle = 0.0f;
+    private float temp1=0;
 
     [SerializeField]
     float eulerAngX;
@@ -16,6 +17,7 @@ public class rotatePlane : MonoBehaviour {
     float eulerAngY;
     [SerializeField]
     float eulerAngZ;
+    
 
     void Update()
     {
@@ -26,17 +28,20 @@ public class rotatePlane : MonoBehaviour {
 
     }
 
-    public void updateRot(string keypadRot)
+    public void updateRot(float keypadRot)
     {
         //send updates to menu and overlay
         Options_Menu.rotOutput(keypadRot);
         Text_Overlay.rotOutput(keypadRot);
 
-        float keyPadUpdate = float.Parse(keypadRot);
-        eulerAngZ = keyPadUpdate;
-
-        transform.Rotate(eulerAngX, eulerAngY, eulerAngZ);
         
+        eulerAngZ = keypadRot - temp1;
+
+        transform.Rotate(eulerAngX, eulerAngY, Mathf.Abs(eulerAngZ - 360));
+        float temp = keypadRot;
+        temp1 = temp;
+
+
 
     }
 
@@ -56,13 +61,13 @@ public class rotatePlane : MonoBehaviour {
         float ang = Mathf.Atan2(pos.y, pos.x) * Mathf.Rad2Deg - baseAngle;
         transform.rotation = Quaternion.AngleAxis(ang, Vector3.forward);
 
-        
-        string rotationOutput = eulerAngZ.ToString("F0");
+        Options_Menu.rotOutput(Mathf.Abs(eulerAngZ - 360)); //send touch update to options
+        Text_Overlay.rotOutput(Mathf.Abs(eulerAngZ - 360)); //send touch update to overlay
 
-     
-        Options_Menu.rotOutput(rotationOutput); //send touch update to options
-        Text_Overlay.rotOutput(rotationOutput); //send touch update to overlay
-        Keypad_RotCode.updateRotatePlane(rotationOutput); //update keypad with new touch
+   
+        //convert to string
+        //string rotationOutput = eulerAngZ.ToString("F0");
+        Keypad_RotCode.updateRotatePlane(ang); //update keypad with new touch
     }
 
 

@@ -124,13 +124,15 @@ public class Keypad_RotCode : MonoBehaviour {
 
     //update z plane when moving info from I-plane
     //need to work on!!!!!!!!
-    public void updateRotatePlane(string rotValues)
+    public void updateRotatePlane(float rotValues)
     {
 
-       
+        
         delete();
 
-        var codNew = rotValues.Split(',').Select(Int32.Parse).ToList();
+        string rotationOutput = rotValues.ToString("F0");
+
+        var codNew = rotationOutput.Split(',').Select(Int32.Parse).ToList();
         cod.Add(codNew[0]);
         text.GetComponent<Text>().text += codNew[0];
         
@@ -167,13 +169,11 @@ public class Keypad_RotCode : MonoBehaviour {
         }
         else
         {
-            Debug.Log("list is full");
             //if first position is greater than 3
             if (cod[0] > 3)
             {
                 if (index > 3)
                 {
-                    Debug.Log("cod[0] > first greater than 3 oops");
                     //clear
                     delete();
                     text.GetComponent<Text>().text = errorText; // then show error output message
@@ -187,7 +187,6 @@ public class Keypad_RotCode : MonoBehaviour {
                 //if cod in 300 range is >= 60
                 if (cod[0] == 3 && cod[1] > 5)
                 {
-                    Debug.Log("cod[1] > less than 400 but greater than 35-");
                     //clear
                     delete();
                     text.GetComponent<Text>().text = errorText; // then show error output message
@@ -201,7 +200,6 @@ public class Keypad_RotCode : MonoBehaviour {
                     //redudent test case
                     if (cod[2] >= 9)
                     {
-                        Debug.Log("greater than 360 less than 399");
                         delete();
                         text.GetComponent<Text>().text = errorText; // then show error output message
 
@@ -209,7 +207,6 @@ public class Keypad_RotCode : MonoBehaviour {
                 }
                 else
                 {
-                    Debug.Log("just let it happen");
                     //let this happen?
                 }
             }
@@ -230,8 +227,7 @@ public class Keypad_RotCode : MonoBehaviour {
         //save List option here
         //check set  parameters
         //then send List to Options_Menu
-
-        Debug.Log("saveList call");
+        
         //if first position is greater than 3
         if (cod[0] >= 3)
         {
@@ -253,7 +249,6 @@ public class Keypad_RotCode : MonoBehaviour {
             {
                 if (cod[0] == 3 && cod[1] > 5)
                 {
-                    Debug.Log("in second else if statement");
                     //clear
                     delete();
                     text.GetComponent<Text>().text = errorText; // then show error output message
@@ -281,7 +276,6 @@ public class Keypad_RotCode : MonoBehaviour {
         }
         else
         {
-            Debug.Log("save and send to sortList");
             //if less than 3, send to sortList
             sortList();
 
@@ -292,13 +286,20 @@ public class Keypad_RotCode : MonoBehaviour {
 
     void sortList()
     {
-     
-
+        
         //rewrite List to a string
-        //this overload calls ToString() on each input element): string.Join(",", ints)
-        var stringsArray = cod.Select(i => i.ToString()).ToArray();
-        var values = string.Join("", stringsArray);
+        //var stringsArray = cod.Select(i => i.ToString()).ToArray();
+        //var values = string.Join("", stringsArray);
 
+        //rewrite list to int
+        float values = 0;
+        foreach(float entry in cod)
+        {
+            values = 10 * values + entry;
+        }
+        //flip array
+        
+       
         //check scene
         //if scene two, send to second option
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("pt2_Touch"))

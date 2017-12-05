@@ -41,7 +41,7 @@ public class Options_Menu : MonoBehaviour {
 
     public Transform gainContentY;
     public Text gainTextY;
-
+    
     public GameObject rotationText;
     public string rotationOutput;
 
@@ -176,11 +176,10 @@ public class Options_Menu : MonoBehaviour {
     //      Rotation
     //***************************************
 
-    public void rotOutput(string rotOut)
+    public void rotOutput(float rotOut)
     {
-        
-        rotationOutput = rotOut;
-        //take string and output
+        rotationOutput = rotOut.ToString("F0");
+
         rotationText.GetComponent<Text>().text = "Rotation: " + rotationOutput + " Deg";
     
     }

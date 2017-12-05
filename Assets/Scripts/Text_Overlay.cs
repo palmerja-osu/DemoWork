@@ -62,10 +62,11 @@ public class Text_Overlay : MonoBehaviour {
     {
         gainTextYOutput.text = optionsUpdateY;
     }
-    public void rotOutput(string rotOut)
+    public void rotOutput(float rotOut)
     {
-
-        rotationOutput = rotOut;
+        
+        
+        rotationOutput = rotOut.ToString("F0");
         //take string and output
         rotationText.GetComponent<Text>().text = rotationOutput + " Deg";
 

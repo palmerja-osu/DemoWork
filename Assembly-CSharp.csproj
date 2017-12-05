@@ -59,7 +59,6 @@
      <Compile Include="Assets\Scripts\Gain_x_VerticalScrollSnap.cs" />
      <Compile Include="Assets\Scripts\Gain_y_VerticalScrollSnap.cs" />
      <Compile Include="Assets\Scripts\ImageChanger.cs" />
-     <Compile Include="Assets\Scripts\Keypad_Code.cs" />
      <Compile Include="Assets\Scripts\Keypad_RotCode.cs" />
      <Compile Include="Assets\Scripts\Keypad_XgainCode.cs" />
      <Compile Include="Assets\Scripts\Keypad_YgainCode.cs" />
