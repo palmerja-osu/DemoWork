@@ -26492,7 +26492,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 279.00003, y: -886.30005}
+  m_AnchoredPosition: {x: 271.99997, y: -862.60004}
   m_SizeDelta: {x: 492.2, y: 185.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &782491104
@@ -28684,7 +28684,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 279.00003, y: -700.60004}
+  m_AnchoredPosition: {x: 271.99997, y: -676.9}
   m_SizeDelta: {x: 492.2, y: 185.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &837698145
@@ -29030,7 +29030,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 279.00003, y: -318.7}
+  m_AnchoredPosition: {x: 272, y: -295}
   m_SizeDelta: {x: 492.2, y: 185.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &843247468
@@ -43415,7 +43415,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 279, y: -507}
+  m_AnchoredPosition: {x: 271.99994, y: -483.3}
   m_SizeDelta: {x: 492.2, y: 185.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1270025285
@@ -49709,7 +49709,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 281.4, y: -1264.1}
+  m_AnchoredPosition: {x: 274.39993, y: -1240.3999}
   m_SizeDelta: {x: 492.2, y: 185.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1449800289
@@ -51326,7 +51326,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 578.9, y: 1546.6}
+  m_SizeDelta: {x: 578.9, y: 1531.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1493530882
 GameObject:
@@ -53766,7 +53766,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 279.00003, y: -1072}
+  m_AnchoredPosition: {x: 271.99997, y: -1048.3}
   m_SizeDelta: {x: 492.2, y: 185.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1567591419
@@ -60179,6 +60179,9 @@ MonoBehaviour:
   Keypad_RotCode: {fileID: 862754386}
   SmallPlaneToggle: {fileID: 703875538}
   Store_Button: {fileID: 1761828986}
+  Text_Overlay: {fileID: 444092036}
+  Keypad_XgainCode: {fileID: 0}
+  Keypad_YgainCode: {fileID: 0}
   ui: {fileID: 1761828979}
   freqContent: {fileID: 2136409826}
   myFreqText: {fileID: 619254194}
@@ -60285,8 +60288,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -720.6, y: -4.199988}
-  m_SizeDelta: {x: 593.2, y: 1539.2}
+  m_AnchoredPosition: {x: -720.6, y: -0.52630615}
+  m_SizeDelta: {x: 593.2, y: 1531.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1761828986
 MonoBehaviour:
@@ -65966,7 +65969,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 281.4, y: -1453.8}
+  m_AnchoredPosition: {x: 274.39993, y: -1430.1001}
   m_SizeDelta: {x: 492.2, y: 185.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1956679311
@@ -67031,6 +67034,15 @@ MonoBehaviour:
   Gain_MenuUI: {fileID: 1986574741}
   Options_Menu: {fileID: 1761828980}
   Small_PlaneToggle: {fileID: 703875538}
+  keypad_XgainCode: {fileID: 0}
+  keypad_YgainCode: {fileID: 0}
+  gainContentX: {fileID: 0}
+  gainXOutput: {fileID: 0}
+  gainContentY: {fileID: 0}
+  gainYOutput: {fileID: 0}
+  gainXNum: 30
+  gainYNum: 30
+  theButton: {fileID: 0}
 --- !u!114 &1986574743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68733,7 +68745,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 279.00003, y: -130.40002}
+  m_AnchoredPosition: {x: 271.99997, y: -106.70001}
   m_SizeDelta: {x: 492.2, y: 185.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2034218131

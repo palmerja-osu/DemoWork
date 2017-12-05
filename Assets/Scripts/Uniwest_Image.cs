@@ -12,12 +12,10 @@ public class Uniwest_Image : MonoBehaviour {
     {
         if (this.ui.activeSelf == false)
         {
-            Debug.Log("if activeSelf == false");
             ui.SetActive(true);
         }
         else if (this.ui.activeSelf == true)
         {
-            Debug.Log("else Toggle();");
             Uniwest_Panel.Toggle();
 
         }
