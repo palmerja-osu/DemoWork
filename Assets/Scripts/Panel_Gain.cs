@@ -23,8 +23,12 @@ public class Panel_Gain : MonoBehaviour
     public double gainXNum = 30.0;
     public double gainYNum = 30.0;
 
+    [Header("UI Images")]
     public Button theButton;
+    public Image theImage;
     private int colorSwitchTrue = 0;
+    public Sprite lockImage1;
+    public Sprite lockImage2;
 
     public void Update()
     {
@@ -331,20 +335,21 @@ public class Panel_Gain : MonoBehaviour
             //color number is 1 
             //activate both sides
             theButton.GetComponent<Image>().color = Color.red;
+            theImage.GetComponent<Image>().sprite = lockImage2;
+
             //update both keypads
             keypad_YgainCode.updateBothButtons(colorSwitch);
             keypad_XgainCode.updateBothButtons(colorSwitch);
-            Debug.Log("red button");
         }
         if(colorSwitch == 0)
         {
             //color is 0
             //sides are independent
-            theButton.GetComponent<Image>().color = Color.white;
+            theButton.GetComponent<Image>().color = Color.gray;
+            theImage.GetComponent<Image>().sprite = lockImage1;
             //update both keypads
             keypad_YgainCode.updateBothButtons(colorSwitch);
             keypad_XgainCode.updateBothButtons(colorSwitch);
-            Debug.Log("white button");
         }
             
 
