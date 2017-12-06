@@ -331,7 +331,7 @@ public class Keypad_RotCode : MonoBehaviour {
     {
         //toggle UI off and Options on
         Toggle();
-        Small_PlaneToggle.Toggle();
+        Small_PlaneToggle.Update();
         //Options_Menu.Update();
     }
 
@@ -339,9 +339,7 @@ public class Keypad_RotCode : MonoBehaviour {
 
     public void Toggle()
     {
-
-        //incase its enabled, flipped and set inactive and visa versa
-        ui.SetActive(!ui.activeSelf);
+        ui.SetActive(false);
 
     }
 }

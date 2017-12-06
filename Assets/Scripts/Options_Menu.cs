@@ -20,6 +20,7 @@ public class Options_Menu : MonoBehaviour {
     public Small_PlaneToggle SmallPlaneToggle;
     public Store_Button Store_Button;
     public Text_Overlay Text_Overlay;
+    public colorLayoutChange colorLayoutChange;
 
     // Gain Keypad
     public Keypad_XgainCode Keypad_XgainCode;
@@ -64,7 +65,6 @@ public class Options_Menu : MonoBehaviour {
     {
 
         changeImage.changeImages();
-        Debug.Log("pressed display button");
     }
 
     public void PressedChannelButton2()
@@ -72,7 +72,6 @@ public class Options_Menu : MonoBehaviour {
 
         changeImage.changeImages();
         change_2ndImage.changeImages();
-        Debug.Log("pressed display button");
     }
 
 
@@ -96,14 +95,14 @@ public class Options_Menu : MonoBehaviour {
     {
         //frequencyText.text = "Frequency: " + OptionsStats.Frequency.ToString() + "MHz";  //could do this
         ToggleFreqMenu();
-        Debug.Log("Frequency button");
     }
     //functionality for second scene
     public void FrequencyButton2()
     {
         SmallPlaneToggle.Toggle();
-        Panel_Freq.Toggle();
-        Debug.Log("Frequency2 button");
+        Panel_Gain.Toggle();
+        Panel_Freq.Update();
+        Keypad_RotCode.Toggle();
     }
     //change menues
     private void ToggleFreqMenu()
@@ -154,7 +153,9 @@ public class Options_Menu : MonoBehaviour {
     public void GainButton2()
     {
         SmallPlaneToggle.Toggle();
-        Panel_Gain.Toggle();
+        Panel_Gain.Update();
+        Panel_Freq.Toggle();
+        Keypad_RotCode.Toggle();
     }
 
     private void ToggleGainMenu()
@@ -163,13 +164,6 @@ public class Options_Menu : MonoBehaviour {
         Panel_Gain.Update();
     }
 
-    //***************************************
-    //      Store // Screenshot 
-    //***************************************
-    public void StoreButton()
-    {
-        Store_Button.StartCoroutine();
-    }
 
 
     //***************************************
@@ -192,12 +186,24 @@ public class Options_Menu : MonoBehaviour {
     public void RotationButton2()
     {
         SmallPlaneToggle.Toggle();
-        Keypad_RotCode.Toggle(); 
+        Panel_Gain.Toggle();
+        Panel_Freq.Toggle();
+        Keypad_RotCode.Update();
+
     }
     private void ToggleRotation()
     {
         Toggle();
         Keypad_RotCode.Update();
+    }
+
+
+    //***************************************
+    //      Store // Screenshot 
+    //***************************************
+    public void StoreButton()
+    {
+        Store_Button.StartCoroutine();
     }
 
     //***************************************
@@ -213,12 +219,16 @@ public class Options_Menu : MonoBehaviour {
 
         changeImage.ClearButtonimgCount();
         change_2ndImage.ClearButtonimgCount2();
-        Debug.Log("pressed clear button");
     }
 
     //***************************************
     //     Change Display Layout
     //***************************************
+
+    public void colorChangeButton()
+    {
+        colorLayoutChange.colorChange();
+    }
 
     public void PressedDisplayButton()
     {
@@ -238,10 +248,7 @@ public class Options_Menu : MonoBehaviour {
 
     public void Toggle()
     {
-
-        //incase its enabled, flipped and set inactive and visa versa
-        ui.SetActive(!ui.activeSelf);
-
-
+        ui.SetActive(false);
+        
     }
 }

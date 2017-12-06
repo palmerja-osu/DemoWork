@@ -18,7 +18,7 @@ public class Small_PlaneToggle : MonoBehaviour {
     {
 
         //incase its enabled, flipped and set inactive and visa versa
-        ui.SetActive(!ui.activeSelf);
+        ui.SetActive(false);
 
     }
 }

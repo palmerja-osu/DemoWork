@@ -53,6 +53,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Change_2ndImage.cs" />
      <Compile Include="Assets\Scripts\ChangeImages.cs" />
+     <Compile Include="Assets\Scripts\colorLayoutChange.cs" />
      <Compile Include="Assets\Scripts\contentScrollRect.cs" />
      <Compile Include="Assets\Scripts\Freq_Units_VerticalScrollSnap.cs" />
      <Compile Include="Assets\Scripts\FreqVerticalScrollSnap.cs" />

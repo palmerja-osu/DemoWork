@@ -42,14 +42,14 @@ public class Panel_Freq : MonoBehaviour {
 
     private void Small_PlaneSwitch()
     {
-        Small_PlaneToggle.Toggle();
+        Small_PlaneToggle.Update();
     }
 
     public void Toggle()
     {
 
         //incase its enabled, flipped and set inactive and visa versa
-        ui.SetActive(!ui.activeSelf);
-        
+        ui.SetActive(false);
+
     }
 }
