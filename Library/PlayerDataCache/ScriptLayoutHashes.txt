@@ -263,6 +263,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 9a22fe4126e78ff4120ea3b0428c3069 Assembly-CSharp.dll:UnityEngine.UI.Extensions.CUIGraphic
 1e51d857a0141cb7c83904db100bdd6c Assembly-CSharp.dll:UnityEngine.UI.Extensions.CurvedText
+5c0eb3915054856e354bdc169db3c3e0 Assembly-CSharp.dll:.colorLayoutChange
 4cbcae506ed2e4b803ac23674896027f Assembly-CSharp.dll:UnityEngine.UI.Extensions.AccordionElement
 99feeef76ea6cd399aa0c4fad978ad5f Assembly-CSharp.dll:.Panel_VGain
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
@@ -302,4 +303,3 @@ c838ea6b6945486d5994fc33c760fc6f Assembly-CSharp.dll:.contentScrollRect
 b15fb6ded837852428ffad873d313f36 Assembly-CSharp.dll:UnityEngine.UI.Extensions.DiamondGraph
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:UnityEngine.UI.Extensions.UIMultiplyEffect
 993d18819482b6007ae64c1273d7d553 Assembly-CSharp.dll:.PinchZoom
-5c0eb3915054856e354bdc169db3c3e0 Assembly-CSharp.dll:.colorLayoutChange
