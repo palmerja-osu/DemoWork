@@ -8,6 +8,7 @@ public class Panel_Freq : MonoBehaviour {
     public GameObject Freq_MenuUI;
     public Options_Menu Options_Menu;
     public Small_PlaneToggle Small_PlaneToggle;
+    public sceneLock sceneLock;
 
 
     public void Update()
@@ -21,8 +22,7 @@ public class Panel_Freq : MonoBehaviour {
     {
         Toggle();
         returnToOptions();
-
-        Debug.Log("pressed exit button");
+        sceneLock.Update();
     }
 
     //exit button for second scene
@@ -31,7 +31,7 @@ public class Panel_Freq : MonoBehaviour {
         Toggle();
         returnToOptions();
         Small_PlaneSwitch();
-        Debug.Log("pressed exit button");
+        sceneLock.Update();
     }    
     
     private void returnToOptions()

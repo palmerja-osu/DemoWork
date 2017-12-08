@@ -7,17 +7,11 @@ using UnityEngine.UI;
 public class Uniwest_InfoPanel : MonoBehaviour {
 
     public GameObject ui;
-
-    // Update is called once per frame
-    public void Update () {
-        
-         ui.SetActive(true);
-        
-    }
+    
 
     public void Uniwest_ImagePanel()
     {
-        Toggle();
+        ui.SetActive(false);
     }
 
     public void Toggle()

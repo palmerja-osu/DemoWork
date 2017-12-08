@@ -16,6 +16,7 @@ public class Keypad_RotCode : MonoBehaviour {
     public GameObject ui;
     public Small_PlaneToggle Small_PlaneToggle;
     public rotatePlane rotatePlane;
+    public sceneLock sceneLock;
 
 
     [Header("Keypad Num ref")]
@@ -317,22 +318,20 @@ public class Keypad_RotCode : MonoBehaviour {
         }
 
         rotatePlane.updateRot(values);
-        //Options_Menu.rotOutput(values);
-        //Text_Overlay.rotOutput(values);
-
     }
+
+    //toggle UI off and Options on
     void returnOption()
     {
-        //toggle UI off and Options on
         Toggle();
         Options_Menu.Update();
+        sceneLock.Update();
     }
     void returnOption2()
     {
-        //toggle UI off and Options on
         Toggle();
         Small_PlaneToggle.Update();
-        //Options_Menu.Update();
+        sceneLock.Update();
     }
 
 

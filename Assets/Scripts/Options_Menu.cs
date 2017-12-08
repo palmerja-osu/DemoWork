@@ -21,6 +21,7 @@ public class Options_Menu : MonoBehaviour {
     public Store_Button Store_Button;
     public Text_Overlay Text_Overlay;
     public colorLayoutChange colorLayoutChange;
+    public sceneLock sceneLock;
 
     // Gain Keypad
     public Keypad_XgainCode Keypad_XgainCode;
@@ -93,8 +94,8 @@ public class Options_Menu : MonoBehaviour {
     }
     public void FrequencyButton()
     {
-        //frequencyText.text = "Frequency: " + OptionsStats.Frequency.ToString() + "MHz";  //could do this
         ToggleFreqMenu();
+        sceneLock.Toggle();
     }
     //functionality for second scene
     public void FrequencyButton2()
@@ -103,12 +104,14 @@ public class Options_Menu : MonoBehaviour {
         Panel_Gain.Toggle();
         Panel_Freq.Update();
         Keypad_RotCode.Toggle();
+        //sceneLock.Toggle();
     }
     //change menues
     private void ToggleFreqMenu()
     {
         Toggle();
         Panel_Freq.Update();
+        sceneLock.Toggle();
     }
 
 
@@ -148,6 +151,7 @@ public class Options_Menu : MonoBehaviour {
     public void GainButton()
     {
         ToggleGainMenu();
+        sceneLock.Toggle();
     }
 
     public void GainButton2()
@@ -156,6 +160,7 @@ public class Options_Menu : MonoBehaviour {
         Panel_Gain.Update();
         Panel_Freq.Toggle();
         Keypad_RotCode.Toggle();
+        //sceneLock.Toggle();
     }
 
     private void ToggleGainMenu()
@@ -181,6 +186,7 @@ public class Options_Menu : MonoBehaviour {
     public void RotationButton()
     {
         ToggleRotation();
+        sceneLock.Toggle();
 
     }
     public void RotationButton2()
@@ -189,6 +195,7 @@ public class Options_Menu : MonoBehaviour {
         Panel_Gain.Toggle();
         Panel_Freq.Toggle();
         Keypad_RotCode.Update();
+        //sceneLock.Toggle();
 
     }
     private void ToggleRotation()
@@ -243,9 +250,7 @@ public class Options_Menu : MonoBehaviour {
     {
         SceneManager.LoadScene("touchscreen demo");
     }
-
-
-
+    
     public void Toggle()
     {
         ui.SetActive(false);

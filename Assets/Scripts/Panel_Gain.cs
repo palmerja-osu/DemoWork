@@ -12,6 +12,7 @@ public class Panel_Gain : MonoBehaviour
     public Small_PlaneToggle Small_PlaneToggle;
     public Keypad_XgainCode keypad_XgainCode;
     public Keypad_YgainCode keypad_YgainCode;
+    public sceneLock sceneLock;
 
     [Header("text")]
     public Transform gainContentX;
@@ -357,7 +358,7 @@ public class Panel_Gain : MonoBehaviour
     }
     private void returnToOptions()
     {
-
+        sceneLock.Update();
         Options_Menu.Update();
     }
 

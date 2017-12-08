@@ -74,6 +74,7 @@
      <Compile Include="Assets\Scripts\PinchZoom.cs" />
      <Compile Include="Assets\Scripts\rotatePlane.cs" />
      <Compile Include="Assets\Scripts\RotScrollSnap.cs" />
+     <Compile Include="Assets\Scripts\sceneLock.cs" />
      <Compile Include="Assets\Scripts\Small_PlaneToggle.cs" />
      <Compile Include="Assets\Scripts\Store_Button.cs" />
      <Compile Include="Assets\Scripts\Text_Overlay.cs" />

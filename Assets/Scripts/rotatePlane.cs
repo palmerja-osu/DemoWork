@@ -9,7 +9,7 @@ public class rotatePlane : MonoBehaviour {
     public Keypad_RotCode Keypad_RotCode;
 
     private float baseAngle = 0.0f;
-    private float temp1=0;
+    private float temp1 = 0;
 
     [SerializeField]
     float eulerAngX;
