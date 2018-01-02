@@ -8117,7 +8117,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Scene has been saved!
+  m_Text: Screenshot has been taken!
 --- !u!222 &813215321
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17884,6 +17884,7 @@ MonoBehaviour:
   Screenshot: {fileID: 782491104}
   Display: {fileID: 1956679311}
   colorChanger: {fileID: 881637492}
+  rotateImage: {fileID: 1441310319}
   plane1: {fileID: 21300000, guid: fdaff9f24844936458a22b0ae35f115e, type: 3}
   plane2: {fileID: 21300000, guid: bf17ee5da3656d4409bbeaaf6b8770b0, type: 3}
   theButton: {fileID: 1794202976}

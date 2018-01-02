@@ -17,6 +17,7 @@ public class sceneLock : MonoBehaviour {
     public Button Screenshot;
     public Button Display;
     public Button colorChanger;
+    public Collider rotateImage;
 
     [Header("UI Images")]
     public Sprite plane1; // I attched these from editor
@@ -49,6 +50,7 @@ public class sceneLock : MonoBehaviour {
                 NULL.interactable = false;
                 Screenshot.interactable = false;
                 Display.interactable = false;
+                rotateImage.enabled = false;
 
 
                 imgNumberCount++; //increase count so it gets higher and switches to different sprite
@@ -65,6 +67,7 @@ public class sceneLock : MonoBehaviour {
                 NULL.interactable = true;
                 Screenshot.interactable = true;
                 Display.interactable = true;
+                rotateImage.enabled = true;
                 imgNumberCount++;
                 imgNumberCount = 0;
                 break;

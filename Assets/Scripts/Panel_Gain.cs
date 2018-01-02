@@ -85,8 +85,17 @@ public class Panel_Gain : MonoBehaviour
             keypad_XgainCode.plus6dB_x(gainXNum);
             if(colorSwitchTrue == 1)
             {
-                keypad_YgainCode.plus6dB_y(gainXNum);
-                UpdateYValue(gainXNum);
+                if (gainYNum + 6 > 114.0)
+                {
+                    gainYNum = 114.0;
+                    keypad_YgainCode.plus6dB_y(gainYNum);
+                    UpdateYValue(gainYNum);
+                }
+                else
+                {
+                    keypad_YgainCode.plus6dB_y(gainYNum + 6);
+                    UpdateYValue(gainYNum + 6);
+                }
             }
         }
         else
@@ -95,8 +104,17 @@ public class Panel_Gain : MonoBehaviour
             keypad_XgainCode.plus6dB_x(gainXNum);
             if (colorSwitchTrue == 1)
             {
-                keypad_YgainCode.plus6dB_y(gainXNum);
-                UpdateYValue(gainXNum);
+                if (gainYNum + 6 > 114.0)
+                {
+                    gainYNum = 114.0;
+                    keypad_YgainCode.plus6dB_y(gainYNum);
+                    UpdateYValue(gainYNum);
+                }
+                else
+                {
+                    keypad_YgainCode.plus6dB_y(gainYNum + 6);
+                    UpdateYValue(gainYNum + 6);
+                }
             }
         }
     }
@@ -111,8 +129,17 @@ public class Panel_Gain : MonoBehaviour
             keypad_XgainCode.plus6dB_x(gainXNum);
             if (colorSwitchTrue == 1)
             {
-                keypad_YgainCode.plus6dB_y(gainXNum);
-                UpdateYValue(gainXNum);
+                if (gainYNum + 0.1 > 114.0)
+                {
+                    gainYNum = 114.0;
+                    keypad_YgainCode.plus6dB_y(gainYNum);
+                    UpdateYValue(gainYNum);
+                }
+                else
+                {
+                    keypad_YgainCode.plus6dB_y(gainYNum + 0.1);
+                    UpdateYValue(gainYNum + 0.1);
+                }
             }
         }
         else
@@ -121,8 +148,17 @@ public class Panel_Gain : MonoBehaviour
             keypad_XgainCode.plus6dB_x(gainXNum);
             if (colorSwitchTrue == 1)
             {
-                keypad_YgainCode.plus6dB_y(gainXNum);
-                UpdateYValue(gainXNum);
+                if (gainYNum + 0.1 > 114.0)
+                {
+                    gainYNum = 114.0;
+                    keypad_YgainCode.plus6dB_y(gainYNum);
+                    UpdateYValue(gainYNum);
+                }
+                else
+                {
+                    keypad_YgainCode.plus6dB_y(gainYNum + 0.1);
+                    UpdateYValue(gainYNum + 0.1);
+                }
             }
         }
     }
@@ -137,8 +173,17 @@ public class Panel_Gain : MonoBehaviour
             keypad_XgainCode.plus6dB_x(gainXNum);
             if (colorSwitchTrue == 1)
             {
-                keypad_YgainCode.plus6dB_y(gainXNum);
-                UpdateYValue(gainXNum);
+                if (gainYNum - 0.1 < 0)
+                {
+                    gainYNum = 0.0;
+                    keypad_YgainCode.plus6dB_y(gainYNum);
+                    UpdateYValue(gainYNum);
+                }
+                else
+                {
+                    keypad_YgainCode.plus6dB_y(gainYNum - 0.1);
+                    UpdateYValue(gainYNum - 0.1);
+                }
             }
         }
         else
@@ -147,8 +192,17 @@ public class Panel_Gain : MonoBehaviour
             keypad_XgainCode.plus6dB_x(gainXNum);
             if (colorSwitchTrue == 1)
             {
-                keypad_YgainCode.plus6dB_y(gainXNum);
-                UpdateYValue(gainXNum);
+                if (gainYNum - 0.1 < 0)
+                {
+                    gainYNum = 0.0;
+                    keypad_YgainCode.plus6dB_y(gainYNum);
+                    UpdateYValue(gainYNum);
+                }
+                else
+                {
+                    keypad_YgainCode.plus6dB_y(gainYNum - 0.1);
+                    UpdateYValue(gainYNum - 0.1);
+                }
             }
         }
     }
@@ -163,8 +217,17 @@ public class Panel_Gain : MonoBehaviour
             keypad_XgainCode.plus6dB_x(gainXNum);
             if (colorSwitchTrue == 1)
             {
-                keypad_YgainCode.plus6dB_y(gainXNum);
-                UpdateYValue(gainXNum);
+                if (gainYNum - 6 < 0)
+                {
+                    gainYNum = 0.0;
+                    keypad_YgainCode.plus6dB_y(gainYNum);
+                    UpdateYValue(gainYNum);
+                }
+                else
+                {
+                    keypad_YgainCode.plus6dB_y(gainYNum - 6);
+                    UpdateYValue(gainYNum - 6);
+                }
             }
         }
         else
@@ -173,8 +236,17 @@ public class Panel_Gain : MonoBehaviour
             keypad_XgainCode.plus6dB_x(gainXNum);
             if (colorSwitchTrue == 1)
             {
-                keypad_YgainCode.plus6dB_y(gainXNum);
-                UpdateYValue(gainXNum);
+                if (gainYNum - 6 < 0)
+                {
+                    gainYNum = 0.0;
+                    keypad_YgainCode.plus6dB_y(gainYNum);
+                    UpdateYValue(gainYNum);
+                }
+                else
+                {
+                    keypad_YgainCode.plus6dB_y(gainYNum - 6);
+                    UpdateYValue(gainYNum - 6);
+                }
             }
         }
            
@@ -215,8 +287,17 @@ public class Panel_Gain : MonoBehaviour
             keypad_YgainCode.plus6dB_y(gainYNum);
             if (colorSwitchTrue == 1)
             {
-                keypad_XgainCode.plus6dB_x(gainYNum);
-                UpdateXValue(gainYNum);
+                if (gainXNum + 6 > 114.0)
+                {
+                    gainXNum = 114.0;
+                    keypad_XgainCode.plus6dB_x(gainXNum);
+                    UpdateXValue(gainXNum);
+                }
+                else
+                {
+                    keypad_XgainCode.plus6dB_x(gainYNum + 6);
+                    UpdateXValue(gainXNum + 6);
+                }
             }
         }
         else
@@ -225,8 +306,17 @@ public class Panel_Gain : MonoBehaviour
             keypad_YgainCode.plus6dB_y(gainYNum);
             if (colorSwitchTrue == 1)
             {
-                keypad_XgainCode.plus6dB_x(gainYNum);
-                UpdateXValue(gainYNum);
+                if (gainXNum + 6 > 114.0)
+                {
+                    gainXNum = 114.0;
+                    keypad_XgainCode.plus6dB_x(gainXNum);
+                    UpdateXValue(gainXNum);
+                }
+                else
+                {
+                    keypad_XgainCode.plus6dB_x(gainYNum + 6);
+                    UpdateXValue(gainXNum + 6);
+                }
             }
         }
     }
@@ -241,8 +331,17 @@ public class Panel_Gain : MonoBehaviour
             keypad_YgainCode.plus6dB_y(gainYNum);
             if (colorSwitchTrue == 1)
             {
-                keypad_XgainCode.plus6dB_x(gainYNum);
-                UpdateXValue(gainYNum);
+                if (gainXNum + 0.1 > 114.0)
+                {
+                    gainXNum = 114.0;
+                    keypad_XgainCode.plus6dB_x(gainXNum);
+                    UpdateXValue(gainXNum);
+                }
+                else
+                {
+                    keypad_XgainCode.plus6dB_x(gainYNum + 0.1);
+                    UpdateXValue(gainXNum + 0.1);
+                }
             }
         }
         else
@@ -251,8 +350,17 @@ public class Panel_Gain : MonoBehaviour
             keypad_YgainCode.plus6dB_y(gainYNum);
             if (colorSwitchTrue == 1)
             {
-                keypad_XgainCode.plus6dB_x(gainYNum);
-                UpdateXValue(gainYNum);
+                if (gainXNum + 0.1 > 114.0)
+                {
+                    gainXNum = 114.0;
+                    keypad_XgainCode.plus6dB_x(gainXNum);
+                    UpdateXValue(gainXNum);
+                }
+                else
+                {
+                    keypad_XgainCode.plus6dB_x(gainYNum + 0.1);
+                    UpdateXValue(gainXNum + 0.1);
+                }
             }
         }
     }
@@ -267,8 +375,17 @@ public class Panel_Gain : MonoBehaviour
             keypad_YgainCode.plus6dB_y(gainYNum);
             if (colorSwitchTrue == 1)
             {
-                keypad_XgainCode.plus6dB_x(gainYNum);
-                UpdateXValue(gainYNum);
+                if (gainXNum - 0.1 < 0)
+                {
+                    gainXNum = 0.0;
+                    keypad_XgainCode.plus6dB_x(gainXNum);
+                    UpdateXValue(gainXNum);
+                }
+                else
+                {
+                    keypad_XgainCode.plus6dB_x(gainYNum - 0.1);
+                    UpdateXValue(gainXNum - 0.1);
+                }
             }
         }
         else
@@ -277,8 +394,17 @@ public class Panel_Gain : MonoBehaviour
             keypad_YgainCode.plus6dB_y(gainYNum);
             if (colorSwitchTrue == 1)
             {
-                keypad_XgainCode.plus6dB_x(gainYNum);
-                UpdateXValue(gainYNum);
+                if (gainXNum - 0.1 < 0)
+                {
+                    gainXNum = 0.0;
+                    keypad_XgainCode.plus6dB_x(gainXNum);
+                    UpdateXValue(gainXNum);
+                }
+                else
+                {
+                    keypad_XgainCode.plus6dB_x(gainYNum - 0.1);
+                    UpdateXValue(gainXNum - 0.1);
+                }
             }
         }
     }
@@ -293,8 +419,17 @@ public class Panel_Gain : MonoBehaviour
             keypad_YgainCode.plus6dB_y(gainYNum);
             if (colorSwitchTrue == 1)
             {
-                keypad_XgainCode.plus6dB_x(gainYNum);
-                UpdateXValue(gainYNum);
+                if (gainXNum - 6 < 0)
+                {
+                    gainXNum = 0.0;
+                    keypad_XgainCode.plus6dB_x(gainXNum);
+                    UpdateXValue(gainXNum);
+                }
+                else
+                {
+                    keypad_XgainCode.plus6dB_x(gainYNum - 6);
+                    UpdateXValue(gainXNum - 6);
+                }
             }
         }
         else
@@ -303,8 +438,17 @@ public class Panel_Gain : MonoBehaviour
             keypad_YgainCode.plus6dB_y(gainYNum);
             if (colorSwitchTrue == 1)
             {
-                keypad_XgainCode.plus6dB_x(gainYNum);
-                UpdateXValue(gainYNum);
+                if (gainXNum - 6 < 0)
+                {
+                    gainXNum = 0.0;
+                    keypad_XgainCode.plus6dB_x(gainXNum);
+                    UpdateXValue(gainXNum);
+                }
+                else
+                {
+                    keypad_XgainCode.plus6dB_x(gainYNum - 6);
+                    UpdateXValue(gainXNum - 6);
+                }
             }
         }
 

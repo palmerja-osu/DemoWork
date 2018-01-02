@@ -701,7 +701,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: kHz
+  m_Text: MHz
 --- !u!222 &63042244
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1191,6 +1191,7 @@ MonoBehaviour:
   Screenshot: {fileID: 140733836}
   Display: {fileID: 1788341939}
   colorChanger: {fileID: 904128868}
+  rotateImage: {fileID: 1964522818}
   plane1: {fileID: 21300000, guid: fdaff9f24844936458a22b0ae35f115e, type: 3}
   plane2: {fileID: 21300000, guid: bf17ee5da3656d4409bbeaaf6b8770b0, type: 3}
   theButton: {fileID: 111950509}
@@ -3004,7 +3005,7 @@ MonoBehaviour:
   Small_PlaneToggle: {fileID: 285011672}
   keypad_XgainCode: {fileID: 190660129}
   keypad_YgainCode: {fileID: 1483062636}
-  sceneLock: {fileID: 0}
+  sceneLock: {fileID: 111950508}
   gainContentX: {fileID: 1038217005}
   gainXOutput: {fileID: 1620658065}
   gainContentY: {fileID: 1287770628}
@@ -3153,7 +3154,7 @@ MonoBehaviour:
   Freq_MenuUI: {fileID: 217654127}
   Options_Menu: {fileID: 968603687}
   Small_PlaneToggle: {fileID: 285011672}
-  sceneLock: {fileID: 0}
+  sceneLock: {fileID: 111950508}
 --- !u!114 &217654130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8965,7 +8966,7 @@ MonoBehaviour:
   ui: {fileID: 862754385}
   Small_PlaneToggle: {fileID: 285011672}
   rotatePlane: {fileID: 1964522816}
-  sceneLock: {fileID: 0}
+  sceneLock: {fileID: 111950508}
   number1: {fileID: 1418763635}
   number2: {fileID: 91322686}
   number3: {fileID: 830566883}
@@ -13240,7 +13241,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Scene has been saved!
+  m_Text: Screenshot has been taken!
 --- !u!222 &1270469012
 CanvasRenderer:
   m_ObjectHideFlags: 0

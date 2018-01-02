@@ -9,7 +9,7 @@ public class rotatePlane : MonoBehaviour {
     public Keypad_RotCode Keypad_RotCode;
 
     private float baseAngle = 0.0f;
-    private float temp1 = 0;
+
 
     [SerializeField]
     float eulerAngX;
@@ -35,14 +35,10 @@ public class rotatePlane : MonoBehaviour {
         Text_Overlay.rotOutput(keypadRot);
 
         
-        eulerAngZ = keypadRot - temp1;
-
+        eulerAngZ = keypadRot - Mathf.Abs(eulerAngZ - 360);
+        
         transform.Rotate(eulerAngX, eulerAngY, Mathf.Abs(eulerAngZ - 360));
-        float temp = keypadRot;
-        temp1 = temp;
-
-
-
+       
     }
 
 
@@ -64,12 +60,10 @@ public class rotatePlane : MonoBehaviour {
         Options_Menu.rotOutput(Mathf.Abs(eulerAngZ - 360)); //send touch update to options
         Text_Overlay.rotOutput(Mathf.Abs(eulerAngZ - 360)); //send touch update to overlay
 
-
-
         
         //convert to string
         //string rotationOutput = eulerAngZ.ToString("F0");
-        Keypad_RotCode.updateRotatePlane(Mathf.Abs(ang + 360)); //update keypad with new touch
+        Keypad_RotCode.updateRotatePlane(Mathf.Abs(ang - 360)); //update keypad with new touch
     }
 
 

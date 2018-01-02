@@ -11,11 +11,13 @@ public class Uniwest_InfoPanel : MonoBehaviour {
 
     public void Uniwest_ImagePanel()
     {
+        Debug.Log("pressed the butotn");
         ui.SetActive(false);
     }
 
     public void Toggle()
     {
+        Debug.Log("toggle pressed");
         ui.SetActive(!ui.activeSelf);
     }
 }
