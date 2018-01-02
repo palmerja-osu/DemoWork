@@ -171,6 +171,7 @@ e583389c14465409c921a33eae490dc3 Assembly-CSharp.dll:.keypadNum
 8c2499f62b33d63ea0ad77eab1be063a Assembly-CSharp.dll:UnityEngine.UI.Extensions.ColorPicker.HexColorField
 a32b13fe929ddb7ecc90e2245d94112f Assembly-CSharp.dll:UnityEngine.UI.Extensions.Gain_y_VerticalScrollSnap
 bcf24c6060c147d4b11041fada88a67a Assembly-CSharp.dll:UnityEngine.UI.Extensions.TabNavigationHelper
+db338f3a02d9e67fb56207575b4d0cc1 Assembly-CSharp.dll:.sceneLock
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:UnityEngine.UI.Extensions.Examples.ComboBoxChanged
 161d81543a4f3cb98ac65429a6a32ff3 Assembly-CSharp.dll:UnityEngine.UI.Extensions.BoundTooltipItem
 3df88b71fa5d7734e8274c97b885d62a Assembly-CSharp.dll:UnityEngine.UI.Extensions.UILineRenderer
@@ -303,4 +304,3 @@ c838ea6b6945486d5994fc33c760fc6f Assembly-CSharp.dll:.contentScrollRect
 b15fb6ded837852428ffad873d313f36 Assembly-CSharp.dll:UnityEngine.UI.Extensions.DiamondGraph
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:UnityEngine.UI.Extensions.UIMultiplyEffect
 993d18819482b6007ae64c1273d7d553 Assembly-CSharp.dll:.PinchZoom
-db338f3a02d9e67fb56207575b4d0cc1 Assembly-CSharp.dll:.sceneLock

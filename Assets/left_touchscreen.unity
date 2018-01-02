@@ -17479,7 +17479,7 @@ MonoBehaviour:
   ui: {fileID: 1761828979}
   freqContent: {fileID: 2136409826}
   myFreqText: {fileID: 619254194}
-  freqUnitContent: {fileID: 2136409826}
+  freqUnitContent: {fileID: 537627454}
   myFreqUnitText: {fileID: 2138046024}
   gainContentX: {fileID: 1459661669}
   gainTextX: {fileID: 1459661671}
